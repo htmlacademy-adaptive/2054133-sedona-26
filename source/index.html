@@ -16,7 +16,6 @@
       <button class="navigation__toggle navigation__toggle--open" type="button">
         <span class="visually-hidden">Раскрыть меню.</span>
       </button>
-      <div class="navigation__container">
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link navigation__link-current" href="index.html">Главная</a>
@@ -31,12 +30,11 @@
             <a class="navigation__link" href="https://htmlacademy.ru/">Html academy</a>
           </li>
         </ul>
-      </div>
     </nav>
   </header>
 
   <main class="main-index">
-    <header class="main-idnex__header hero">
+    <header class="main-index__header hero">
       <h1 class="visually-hidden">Сайт туристического городка Седона.</h1>
       <img class="hero__image" src="img/welcome.svg" width="282" height="214"
         alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks" />
@@ -48,7 +46,7 @@
         <p class="advantages__discription">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       </div>
 
-      <ul class="advantages__list">
+      <ol class="advantages__list">
         <li class="advantages__item advantages__item--primary-color">
           <h3 class="advantages__header">Настоящий городок</h3>
           <p class="advantages__desription">Седона не атракцион для туристов, там течет своя жизнь</p>
@@ -85,7 +83,7 @@
           <h3 class="advantages__header">Мало туристов</h3>
           <p class="advantages__desription">Большинство едет в Гранд Каньон и толпятся там</p>
         </li>
-      </ul>
+      </ol>
     </section>
 
     <section class="offer">
@@ -103,24 +101,18 @@
   </main>
 
     <footer class="footer">
-      <b class="footer__tagline">#visitsedona</b>
-      <ul class="footer__social-list">
-        <li class="footer__social-item footer__social-item--vkontakte">
+      <p class="footer__tagline">#visitsedona</p>
+      <div class="footer__social-wrapper">
           <a class="footer__social-link">
             <span class="visually-hidden">vkontakte</span>
           </a>
-        </li>
-        <li class="footer__social-item footer__social-item--telegram">
           <a class="footer__social-link">
             <span class="visually-hidden">telegram</span>
           </a>
-        </li>
-        <li class="footer__social-item footer__social-item--youtube">
           <a class="footer__social-link">
             <span class="visually-hidden">youtube</span>
           </a>
-        </li>
-      </ul>
+      </div>
       <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="footer__copyright-link-description">Разработано</span>
         <svg width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
