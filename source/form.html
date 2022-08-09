@@ -44,49 +44,48 @@
       <h2 class="feedback__header">Оставьте свой отзыв</h2>
         <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами
           достопримечательностях</p>
-        <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="feedback__fieldset review">
-            <legend class="review__legend">Представьесь:</legend>
-            <label class="review__label" for="name">Имя*</label>
-            <input class="review__input" type="text" id="name" name="name" value="Петр">
-            <label class="review__label" for="surname">Фамилия*</label>
-            <input class="review__input" type="text" id="surname" name="surname" value="Пустота">
-            <label class="review__label" for="patronymic">Отчество</label>
-            <input class="review__input" type="text" id="patronymic" name="patronymic" value="Викторович">
+        <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="form_fieldset">
+            <legend class="form__legend">Представьесь:</legend>
+            <label class="form__label label-thin" for="name">Имя*</label>
+            <input class="form__input input-area" type="text" id="name" name="name" value="Петр">
+            <label class="form__label label-thin" for="surname">Фамилия*</label>
+            <input class="form__input input-area" type="text" id="surname" name="surname" value="Пустота">
+            <label class="form__label label-thin" for="patronymic">Отчество</label>
+            <input class="form__input input-area" type="text" id="patronymic" name="patronymic" value="Викторович">
           </fieldset>
-          <fieldset class="feedback__fieldset review">
-            <legend class="review___legend">Контактная информация:</legend>
-            <label class="review___label" for="phone">Контактный телефон*:</label>
-            <input class="review___input" type="text" id="phone" name="phone" placeholder="Введите телефон">
-            <label class="review___label" for="mail">Электронная почта*:</label>
-            <input class="review___input" type="text" id="mail" name="mail" placeholder="Введите e-mail">
+          <fieldset class="form__fieldset">
+            <legend class="form___legend">Контактная информация:</legend>
+            <label class="form___label label-thin" for="phone">Контактный телефон*:</label>
+            <input class="form___input input-area" type="text" id="phone" name="phone" placeholder="Введите телефон">
+            <label class="form___label label-thin" for="mail">Электронная почта*:</label>
+            <input class="form___input input-area" type="text" id="mail" name="mail" placeholder="Введите e-mail">
           </fieldset>
-          <fieldset class="feedback__fieldset review">
-            <legend class="review__legend">Ваше общее впечатление:</legend>
-            <input class="review__input" type="radio" id="positive" name="impression" value="positive" checked>
-            <label class="review__label" for="positive">Скорее положительное</label>
-            <input class="review__input" type="radio" id="negative" name="impression" value="negative">
-            <label class="review__label" for="negative">Скорее отрицательное</label>
-            <input class="review__input" type="radio" id="difficult" name="impression" value="difficult">
-            <label class="review__label" for="difficult">Затрудняюсь ответить</label>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Ваше общее впечатление:</legend>
+            <input class="form__input input-radio" type="radio" id="positive" name="impression" value="positive" checked>
+            <label class="form__label label-bold" for="positive">Скорее положительное</label>
+            <input class="form__input input-radio" type="radio" id="negative" name="impression" value="negative">
+            <label class="form__label label-bold" for="negative">Скорее отрицательное</label>
+            <input class="form__input input-radio" type="radio" id="difficult" name="impression" value="difficult">
+            <label class="form__label label-bold" for="difficult">Затрудняюсь ответить</label>
           </fieldset>
-          <fieldset class="feedback__fieldset review">
-            <legend class="review__legend">Посещенные достопримечательности:</legend>
-            <input class="review__input" type="checkbox" id="bridge" name="attraction" value="bridge-of-devil" checked>
-            <label class="review__label" for="bridge">Моста дьявола</label>
-            <input class="review__input" type="checkbox" id="mountian-bell" name="attraction" value="mountian-bell"
-              checked>
-            <label class="review__label" for="mountian-bell">Гора колокол</label>
-            <input class="review__input" type="checkbox" id="slide-park" name="attraction" value="slide-park" checked>
-            <label class="review__label" for="slide-park">Слайд-парк</label>
-            <input class="review__input" type="checkbox" id="red-rocks" name="attraction" value="red-rocks">
-            <label class="review__label" for="red-rocks">Красные скалы</label>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Посещенные достопримечательности:</legend>
+            <input class="form__input input-checkbox" type="checkbox" id="bridge" name="attraction" value="bridge-of-devil" checked>
+            <label class="form__label label-bold" for="bridge">Моста дьявола</label>
+            <input class="form__input input-checkbox" type="checkbox" id="mountian-bell" name="attraction" value="mountian-bell" checked>
+            <label class="form__label label-bold" for="mountian-bell">Гора колокол</label>
+            <input class="form__input input-checkbox" type="checkbox" id="slide-park" name="attraction" value="slide-park" checked>
+            <label class="form__label label-bold" for="slide-park">Слайд-парк</label>
+            <input class="form__input input-checkbox" type="checkbox" id="red-rocks" name="attraction" value="red-rocks">
+            <label class="form__label label-bold" for="red-rocks">Красные скалы</label>
           </fieldset>
-          <fieldset class="feedback__fieldset review">
-            <legend class="review__legend">Опишите свои эмоции:</legend>
-            <textarea class="review__textarea" name="emotion" cols="20" rows="7"></textarea>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Опишите свои эмоции:</legend>
+            <textarea class="form__textarea" name="emotion" cols="20" rows="7"></textarea>
           </fieldset>
-          <button class="feedback__form-button button" type="submit">Отправить отзыв</button>
+          <button class="form__button button" type="submit">Отправить отзыв</button>
         </form>
     </section>
   </main>
@@ -111,7 +110,7 @@
       </li>
     </ul>
     <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-      <span class="footer__copyright-link-description">разработано</span>
+      <span class="footer__copyright-link-description">Разработано</span>
       <svg width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z" />
