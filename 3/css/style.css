@@ -64,8 +64,9 @@
 }
 .navigation__list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   background-color: #81b3d2;
 }
 .navigation__item {
@@ -88,10 +89,17 @@
 .hero {
   display: flex;
   background-color: #dbe9f2;
-  background-image: url("../../img/hero_background-mobile.jpg");
+  padding: 90px 20px 85px 20px;
+}
+.hero--background-large {
+  background-image: url("../../img/hero-background-large-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 90px 19px 85px 19px;
+}
+.hero--background-small {
+  background-image: url("../../img/hero-background-small-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .hero__image {
   margin: auto;
@@ -105,7 +113,7 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 35px;
 }
 .advantages__highlight {
@@ -126,8 +134,9 @@
 }
 .advantages__list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .advantages__item-container {
   text-align: center;
@@ -149,8 +158,9 @@
 }
 .reasons {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .reasons__item {
   padding: 22px 18px 22px 65px;
@@ -160,7 +170,7 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 .reasons__description {
@@ -181,7 +191,7 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 31px;
 }
 .offer__description {
@@ -230,7 +240,21 @@
   width: 48px;
   height: 48px;
   background-color: #81b3d2;
-  background-image: url("../../img/vkontakte.svg");
+}
+.footer__social-link--vkontakte {
+  background-image: url("../img/vkontakte.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer__social-link--telegram {
+  background-image: url("../img/telegram.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer__social-link--youtube {
+  background-image: url("../img/youtube.svg");
   background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position: center;
@@ -239,15 +263,15 @@
   margin-right: 6px;
 }
 .gallery__container {
-  padding: 0 20px;
+  padding: 33px 20px;
   text-align: center;
-  margin-bottom: 50px;
 }
 .gallery__header {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 0;
   margin: 0;
   margin-bottom: 35px;
 }
@@ -260,8 +284,9 @@
 }
 .photo-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .photo-list__item {
   padding: 25px 20px;
@@ -271,10 +296,11 @@
   margin-bottom: 15px;
 }
 .photo-list__title {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 0;
   margin: 0;
 }
 .photo-list__author {
@@ -325,14 +351,14 @@
 }
 .feedback__container {
   text-align: center;
-  margin-bottom: 53px;
+  padding-bottom: 28px;
 }
 .feedback__header {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 35px;
 }
 .feedback__description {
@@ -350,14 +376,16 @@
 }
 .form__list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .form__legend {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 0;
   text-align: center;
   padding: 0;
   margin-bottom: 20px;
@@ -407,9 +435,6 @@
   opacity: 60%;
   text-align: end;
 }
-.main-catalog__header {
-  margin-bottom: 37px;
-}
 .modal-error {
   padding: 45px 42px 35px 42px;
   text-align: center;
@@ -422,7 +447,7 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 37px;
 }
 .modal-error__description {
@@ -442,15 +467,14 @@
   text-align: center;
 }
 .modal-confirmation__container {
-  padding: 39px 39px 0 39px;
-  margin-bottom: 57px;
+  padding: 39px 39px 57px 39px;
 }
 .modal-confirmation__header {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 37px;
 }
 .modal-confirmation__description {
