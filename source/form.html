@@ -3,19 +3,23 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HTML Academy: Седона</title>
 </head>
 
 <body class="page__body">
+  <div class="page__body-container">
 
-  <header class="header">
-    <a class="header__logo logo">
-      <img src="img/logo.png" width="185" height="96" alt="Логотип Седона">
-    </a>
-    <nav class="header__navigation navigation">
-      <button class="navigation__toggle navigation__toggle--open" type="button">
-        <span class="visually-hidden">Раскрыть меню.</span>
-      </button>
+    <header class="header">
+      <a class="header__logo logo">
+        <img src="img/logo.png" width="185" height="96" alt="Логотип Седона">
+      </a>
+      <nav class="header__navigation navigation">
+        <button class="navigation__toggle navigation__toggle--open" type="button">
+          <span class="visually-hidden">Раскрыть меню.</span>
+        </button>
+        <!-- закрыть меню navigation__list--close -->
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
@@ -30,86 +34,132 @@
             <a class="navigation__link" href="https://htmlacademy.ru/">Html academy</a>
           </li>
         </ul>
-    </nav>
-  </header>
-
-  <main class="main-form">
-    <header class="main-form__header hero">
-      <h1 class="visually-hidden">Страница отзыва</h1>
-      <img href="img/sedona.svg" width="229" height="39" alt="Седона">
+      </nav>
     </header>
-    <section class="main-form__feedback feedback">
-      <h2 class="feedback__header">Оставьте свой отзыв</h2>
-        <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами
-          достопримечательностях</p>
+
+    <main class="page__main main-form">
+      <header class="main-form__header hero hero--background-small">
+        <img class="main-form__image" src="img/sedona.svg" width="229" height="39" alt="Седона">
+      </header>
+      <section class="main-form__feedback feedback">
+        <div class="feedback__container">
+          <h1 class="feedback__header">Оставьте свой отзыв</h1>
+          <p class="feedback__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных
+            вами
+            достопримечательностях</p>
+        </div>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form_fieldset">
+          <fieldset class="form__fieldset">
             <legend class="form__legend">Представьесь:</legend>
-            <label class="form__label label-thin" for="name">Имя*</label>
-            <input class="form__input input-area" type="text" id="name" name="name" value="Петр">
-            <label class="form__label label-thin" for="surname">Фамилия*</label>
-            <input class="form__input input-area" type="text" id="surname" name="surname" value="Пустота">
-            <label class="form__label label-thin" for="patronymic">Отчество</label>
-            <input class="form__input input-area" type="text" id="patronymic" name="patronymic" value="Викторович">
+            <label class="form__label-thin" for="name">Имя*:</label>
+            <input class="form__input-area" type="text" id="name" name="name" value="Петр">
+            <label class="form__label-thin" for="surname">Фамилия*:</label>
+            <input class="form__input-area" type="text" id="surname" name="surname" value="Пустота">
+            <label class="form__label-thin" for="patronymic">Отчество:</label>
+            <input class="form__input-area" type="text" id="patronymic" name="patronymic" value="Викторович">
           </fieldset>
           <fieldset class="form__fieldset">
-            <legend class="form___legend">Контактная информация:</legend>
-            <label class="form___label label-thin" for="phone">Контактный телефон*:</label>
-            <input class="form___input input-area" type="text" id="phone" name="phone" placeholder="Введите телефон">
-            <label class="form___label label-thin" for="mail">Электронная почта*:</label>
-            <input class="form___input input-area" type="text" id="mail" name="mail" placeholder="Введите e-mail">
+            <legend class="form__legend">Контактная информация:</legend>
+            <label class="form__label-thin" for="phone">Контактный телефон*:</label>
+            <input class="form__input-area" type="text" id="phone" name="phone" placeholder="Введите телефон">
+            <label class="form__label-thin" for="mail">Электронная почта*:</label>
+            <input class="form__input-area" type="text" id="mail" name="mail" placeholder="Введите e-mail">
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">Ваше общее впечатление:</legend>
-            <input class="form__input input-radio" type="radio" id="positive" name="impression" value="positive" checked>
-            <label class="form__label label-bold" for="positive">Скорее положительное</label>
-            <input class="form__input input-radio" type="radio" id="negative" name="impression" value="negative">
-            <label class="form__label label-bold" for="negative">Скорее отрицательное</label>
-            <input class="form__input input-radio" type="radio" id="difficult" name="impression" value="difficult">
-            <label class="form__label label-bold" for="difficult">Затрудняюсь ответить</label>
+            <ul class="form__list">
+              <li class="form__item">
+                <input class="form__input-radio" type="radio" id="positive" name="impression" value="positive" checked>
+                <label class="form__label-bold" for="positive">Скорее положительное</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input-radio" type="radio" id="negative" name="impression" value="negative">
+                <label class="form__label-bold" for="negative">Скорее отрицательное</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input-radio" type="radio" id="difficult" name="impression" value="difficult">
+                <label class="form__label form__label-bold" for="difficult">Затрудняюсь ответить</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">Посещенные достопримечательности:</legend>
-            <input class="form__input input-checkbox" type="checkbox" id="bridge" name="attraction" value="bridge-of-devil" checked>
-            <label class="form__label label-bold" for="bridge">Моста дьявола</label>
-            <input class="form__input input-checkbox" type="checkbox" id="mountian-bell" name="attraction" value="mountian-bell" checked>
-            <label class="form__label label-bold" for="mountian-bell">Гора колокол</label>
-            <input class="form__input input-checkbox" type="checkbox" id="slide-park" name="attraction" value="slide-park" checked>
-            <label class="form__label label-bold" for="slide-park">Слайд-парк</label>
-            <input class="form__input input-checkbox" type="checkbox" id="red-rocks" name="attraction" value="red-rocks">
-            <label class="form__label label-bold" for="red-rocks">Красные скалы</label>
+            <ul class="form__list">
+              <li class="form__item">
+                <input class="form__input-checkbox" type="checkbox" id="bridge" name="attraction"
+                  value="bridge-of-devil" checked>
+                <label class="form__label-bold" for="bridge">Моста Дьявола</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input-checkbox" type="checkbox" id="mountian-bell" name="attraction"
+                  value="mountian-bell" checked>
+                <label class="form__label-bold" for="mountian-bell">Гора-Колокол</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input-checkbox" type="checkbox" id="slide-park" name="attraction" value="slide-park"
+                  checked>
+                <label class="form__label-bold" for="slide-park">Слайд-парк</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input-checkbox" type="checkbox" id="red-rocks" name="attraction" value="red-rocks">
+                <label class="form__label-bold" for="red-rocks">Красные скалы</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">Опишите свои эмоции:</legend>
-            <textarea class="form__textarea" name="emotion" cols="20" rows="7"></textarea>
+            <textarea class="form__textarea" name="emotion" cols="20" rows="7"
+              placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <button class="form__button button" type="submit">Отправить отзыв</button>
+          <span class="form__note">*&nbsp;—&nbsp;обязательные поля</span>
         </form>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer class="footer">
-    <p class="footer__tagline">#visitsedona</p>
-    <div class="footer__social-wrapper">
-        <a class="footer__social-link">
+    <footer class="footer">
+      <p class="footer__tagline">#visitsedona</p>
+      <div class="footer__social-container">
+        <a class="footer__social-link footer__social-link--vkontakte" href="https://vk.com/htmlacademy">
           <span class="visually-hidden">vkontakte</span>
         </a>
-        <a class="footer__social-link">
+        <a class="footer__social-link footer__social-link--telegram" href="https://t.me/htmlacademy">
           <span class="visually-hidden">telegram</span>
         </a>
-        <a class="footer__social-link">
+        <a class="footer__social-link footer__social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">youtube</span>
         </a>
-    </div>
-    <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-      <span class="footer__copyright-link-description">Разработано</span>
-      <svg width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z" />
-      </svg>
-    </a>
-  </footer>
+      </div>
+      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="footer__copyright-link-description">Разработано</span>
+        <svg width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z" />
+        </svg>
+      </a>
+    </footer>
 
+    <!-- класс закрывающий меню modal--close -->
+    <div class="modal-error">
+      <div class="modal-error__container">
+        <h2 class="modal-error__header">Что-то пошло не так!</h2>
+        <p class="modal-error__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      </div>
+      <button class="modal-error__button button" type="button">Ок</button>
+    </div>
+
+    <div class="modal-confirmation">
+      <div class="modal-confirmation__container">
+        <h2 class="modal-confirmation__header">Что-то пошло не так!</h2>
+        <p class="modal-confirmation__description">Проверьте поля, выделенные красным, скорее всего вы забыли их
+          заполнить</p>
+      </div>
+      <div class="modal-confirmation__button-container">
+        <button class="modal-confirmation__button button" type="button">Закрыть окно</button>
+      </div>
+    </div>
+
+  </div>
 </body>
 
 </html>

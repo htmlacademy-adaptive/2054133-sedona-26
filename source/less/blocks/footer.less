@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 29px;
+}
+
+.footer__tagline {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.footer__social-container {
+  display: flex;
+  margin-bottom: 47px;
+}
+
+.footer__social-link {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-color: @primary-color;
+
+  &--vkontakte {
+    background-image: url("../img/vkontakte.svg");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--telegram {
+    background-image: url("../img/telegram.svg");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--youtube {
+    background-image: url("../img/youtube.svg");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
