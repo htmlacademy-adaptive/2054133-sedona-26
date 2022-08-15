@@ -1,12 +1,21 @@
 .hero {
   display: flex;
   background-color: @substrate-color;
-  background-image: url("../../img/hero_background-mobile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 90px 19px 85px 19px;
+  padding: 90px 20px 85px 20px;
 
-  &__image {
-    margin: auto;
+  &--background-large {
+    background-image: url("../../img/hero-background-large-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+
+  &--background-small {
+    background-image: url("../../img/hero-background-small-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.hero__image {
+  margin: auto;
 }
