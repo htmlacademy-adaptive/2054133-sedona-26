@@ -1,21 +1,46 @@
 .navigation {
   position: absolute;
-  width: 320px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    align-self: center;
+  }
 }
 
 .navigation__toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 17px;
+  right: 20px;
+  width: 23px;
+  height: 22px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .navigation__list {
   .list-reset();
   background-color: @primary-color;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    background-color: inherit;
+  }
 }
 
 .navigation__item {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    flex-basis: 25%;
+
+    &--margin-right {
+      margin-right: 20%;
+    }
+  }
 }
 
 .navigation__link {
@@ -26,8 +51,14 @@
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
-  padding-top: 17px;
-  padding-bottom: 12px;
+  padding: 17px 0 12px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+    padding: 18px 0;
+  }
 }
 
 .navigation__list--close {

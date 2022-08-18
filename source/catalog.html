@@ -12,7 +12,7 @@
   <div class="page__body-container">
 
     <header class="header">
-      <a class="header__logo logo">
+      <a class="header__logo" href="index.html">
         <img src="img/logo.png" width="185" height="96" alt="Логотип Седона">
       </a>
       <nav class="header__navigation navigation">
@@ -24,7 +24,7 @@
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--margin-right">
             <a class="navigation__link navigation__link-current" href="catalog.html">Фото и видео</a>
           </li>
           <li class="navigation__item">
@@ -50,35 +50,46 @@
         <ul class="gallery__list photo-list">
           <li class="photo-list__item">
             <img class="photo-list__image" src="img/photo1-mobile.jpg" width="280" height="280" alt="фотография заката">
-            <h2 class="photo-list__title">Неродные просторы</h2>
-            <p class="photo-list__author">Автор фото: Борис</p>
-            <a class="photo-list__like-link" href="#">
-              <span class="photo-list__like-counter">1350</span>
-            </a>
+            <div class="photo-list__item-container">
+              <h2 class="photo-list__title">Неродные просторы</h2>
+              <p class="photo-list__author">Автор фото: Борис</p>
+              <a class="photo-list__like-link" href="#">
+                <span class="photo-list__like-counter">1350</span>
+              </a>
+            </div>
           </li>
           <li class="photo-list__item">
-            <img class="photo-list__image" src="img/photo2-mobile.jpg" width="280" height="280" alt="фотография кактуса">
-            <h2 class="photo-list__title">Местная растительность</h2>
-            <p class="photo-list__author">Автор фото: Сергей</p>
-            <a class="photo-list__like-link" href="#">
-              <span class="photo-list__like-counter">143</span>
-            </a>
+            <img class="photo-list__image" src="img/photo2-mobile.jpg" width="280" height="280"
+              alt="фотография кактуса">
+            <div class="photo-list__item-container">
+              <h2 class="photo-list__title">Местная растительность</h2>
+              <p class="photo-list__author">Автор фото: Сергей</p>
+              <a class="photo-list__like-link" href="#">
+                <span class="photo-list__like-counter">143</span>
+              </a>
+            </div>
           </li>
           <li class="photo-list__item">
-            <img class="photo-list__image" src="img/photo3-mobile.jpg" width="280" height="280" alt="фотография горной дороги">
-            <h2 class="photo-list__title">Дорога на север</h2>
-            <p class="photo-list__author">Автор фото: Петр</p>
-            <a class="photo-list__like-link" href="#">
-              <span class="photo-list__like-counter">96</span>
-            </a>
+            <img class="photo-list__image" src="img/photo3-mobile.jpg" width="280" height="280"
+              alt="фотография горной дороги">
+            <div class="photo-list__item-container">
+              <h2 class="photo-list__title">Дорога на север</h2>
+              <p class="photo-list__author">Автор фото: Петр</p>
+              <a class="photo-list__like-link" href="#">
+                <span class="photo-list__like-counter">96</span>
+              </a>
+            </div>
           </li>
           <li class="photo-list__item">
-            <img class="photo-list__image" src="img/photo4-mobile.jpg" width="280" height="280" alt="фотография моста дьявола">
-            <h2 class="photo-list__title">Мост дьявола</h2>
-            <p class="photo-list__author">Автор фото: Антон</p>
-            <a class="photo-list__like-link" href="#">
-              <span class="photo-list__like-counter">254</span>
-            </a>
+            <img class="photo-list__image" src="img/photo4-mobile.jpg" width="280" height="280"
+              alt="фотография моста дьявола">
+            <div class="photo-list__item-container">
+              <h2 class="photo-list__title">Мост дьявола</h2>
+              <p class="photo-list__author">Автор фото: Антон</p>
+              <a class="photo-list__like-link" href="#">
+                <span class="photo-list__like-counter">254</span>
+              </a>
+            </div>
           </li>
         </ul>
       </section>
@@ -95,25 +106,27 @@
 
 
     <footer class="footer">
-      <p class="footer__tagline">#visitsedona</p>
-      <div class="footer__social-container">
-        <a class="footer__social-link footer__social-link--vkontakte" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">vkontakte</span>
-        </a>
-        <a class="footer__social-link footer__social-link--telegram" href="https://t.me/htmlacademy">
-          <span class="visually-hidden">telegram</span>
-        </a>
-        <a class="footer__social-link footer__social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-          <span class="visually-hidden">youtube</span>
+      <div class="footer__container">
+        <p class="footer__tagline">#visitsedona</p>
+        <div class="footer__social-container">
+          <a class="footer__social-link footer__social-link--vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">vkontakte</span>
+          </a>
+          <a class="footer__social-link footer__social-link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">telegram</span>
+          </a>
+          <a class="footer__social-link footer__social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">youtube</span>
+          </a>
+        </div>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="footer__copyright-link-description">Разработано</span>
+          <svg width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z" />
+          </svg>
         </a>
       </div>
-      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="footer__copyright-link-description">Разработано</span>
-        <svg width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z" />
-        </svg>
-      </a>
     </footer>
 
   </div>

@@ -1,6 +1,9 @@
 .modal-error {
   padding: 45px 42px 35px 42px;
   text-align: center;
+  align-self: center;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
 .modal-error__container {
@@ -8,8 +11,13 @@
 }
 
 .modal-error__header {
-  .header-common();
-  margin-bottom: 37px;
+  .header-common-s();
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    .header-common-l();
+    margin-bottom: 38px;
+  }
 }
 
 .modal-error__description {

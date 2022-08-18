@@ -1,15 +1,25 @@
 .offer {
-  padding: 38px 18px 49px 18px;
+  padding: 40px 20px 50px 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 20px 75px 20px;
+  }
 }
 
 .offer__container {
-  margin-bottom: 33px;
+  margin: 0 auto 33px;
+  max-width: 435px;
 }
 
 .offer__header {
-  .header-common();
+  .header-common-m();
   margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    .header-common-l();
+    margin-bottom: 38px;
+  }
 }
 
 .offer__description {
@@ -24,4 +34,6 @@
   display: block;
   padding-top: 16px;
   padding-bottom: 16px;
+  max-width: 458px;
+  margin: 0 auto;
 }
