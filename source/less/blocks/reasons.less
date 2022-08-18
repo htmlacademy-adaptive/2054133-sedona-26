@@ -1,13 +1,37 @@
 .reasons {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
 
 .reasons__item {
   padding: 22px 18px 22px 65px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 33.3%;
+    text-align: center;
+    max-width: 400px;
+    padding: 158px 20px 59px 20px;
+    box-sizing: border-box;
+  }
+}
+
+.reason__container {
+  @media (min-width: @tablet-width) {
+    padding: 158px 20px 59px 20px;
+    max-width: 285px;
+  }
 }
 
 .reasons__header {
-  .header-common();
+  .header-common-mobile();
   margin-bottom: 16px;
 }
 

@@ -1,14 +1,26 @@
 .feedback {
-  padding: 36px 20px 24px 20px;
+  max-width: 87.5%;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 84.5%;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 80%;
+  }
 }
 
 .feedback__container {
   text-align: center;
+  padding-top: 36px;
   padding-bottom: 28px;
+  max-width: 435px;
+  margin: 0 auto;
 }
 
 .feedback__header {
-  .header-common();
+  .header-common-mobile();
   margin-bottom: 35px;
 }
 

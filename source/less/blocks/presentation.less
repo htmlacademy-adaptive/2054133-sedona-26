@@ -1,11 +1,23 @@
 .presentation {
   display: flex;
   flex-direction: column;
+  max-width: 87.5%;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 84.5%;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 100%;
+  }
 }
 
 .presentation__container {
   padding: 17px 20px 38px 20px;
   text-align: center;
+  max-width: 445px;
+  margin: 0 auto;
 }
 
 .presentation__header {
@@ -28,4 +40,5 @@
 .presentation__video {
   display: block;
   margin: 0 auto;
+  object-fit: cover;
 }
