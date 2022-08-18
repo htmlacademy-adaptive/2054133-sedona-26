@@ -14,19 +14,25 @@
 }
 
 .presentation__container {
-  padding: 17px 20px 38px 20px;
+  padding: 17px 20px 38px;
   text-align: center;
   max-width: 445px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
 }
 
 .presentation__header {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 38px;
+  .header-common-s();
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    .header-common-l();
+    margin-bottom: 40px;
+  }
 }
 
 .presentation__description {

@@ -4,15 +4,14 @@
   min-width: 285px;
   max-width: 520px;
   margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    max-width: 520px;
-    margin: 0 auto;
-  }
 }
 
 .advantages__header {
-  .header-common-mobile();
+  .header-common-s();
+
+  @media (min-width: @tablet-width) {
+    .header-common-m();
+  }
 
   &--highlight {
     margin-bottom: 11px;

@@ -13,26 +13,33 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     flex-basis: 33.3%;
     text-align: center;
     max-width: 400px;
-    padding: 158px 20px 59px 20px;
+    padding: 160px 20px 60px;
     box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 80px;
   }
 }
 
 .reason__container {
   @media (min-width: @tablet-width) {
-    padding: 158px 20px 59px 20px;
+    padding: 160px 20px 60px;
     max-width: 285px;
   }
 }
 
 .reasons__header {
-  .header-common-mobile();
-  margin-bottom: 16px;
+  .header-common-s();
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    .header-common-m();
+  }
 }
 
 .reasons__description {

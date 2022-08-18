@@ -58,11 +58,11 @@
 
   @media (min-width: @desktop-width) {
     &--three-column {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
 
     &--four-column {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 4fr);
     }
   }
 }
@@ -75,14 +75,18 @@
 }
 
 .form__legend {
-  .header-common-mobile();
+  .header-common-s();
   text-align: center;
-  padding: 0;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    .header-common-m();
+    margin-bottom: 28px;
+  }
 }
 
 .form__input-area {
-  font-style: inherit;
+  font-family: inherit;
   font-weight: 700;
   line-height: 26px;
   background-color: #f2f2f2;
@@ -120,12 +124,8 @@
   min-height: 150px;
   background-color: #f2f2f2;
   border: none;
-  padding: 0;
+  padding: 16px;
   margin: 0 auto;
-
-  &::placeholder {
-    padding: 16px;
-  }
 }
 
 .form__button {

@@ -13,8 +13,13 @@
 }
 
 .offer__header {
-  .header-common-mobile();
+  .header-common-m();
   margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    .header-common-l();
+    margin-bottom: 38px;
+  }
 }
 
 .offer__description {
