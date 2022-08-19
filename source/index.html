@@ -13,14 +13,13 @@
 
     <header class="header">
       <a class="header__logo">
-        <img src="img/logo.png" width="185" height="96" alt="Логотип Седона">
+        <img class="header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Седона">
       </a>
       <nav class="header__navigation navigation">
-        <button class="navigation__toggle navigation__toggle--open" type="button">
+        <button class="navigation__toggle navigation__toggle--opened" type="button">
           <span class="visually-hidden">Раскрыть меню</span>
         </button>
-        <!-- класс закрывающий меню navigation__list--close -->
-        <ul class="navigation__list">
+        <ul class="navigation__list navigation__list--opened">
           <li class="navigation__item">
             <a class="navigation__link navigation__link-current" href="index.html">Главная</a>
           </li>
@@ -45,7 +44,7 @@
 
       <section class="advantages">
         <div class="advantages__container">
-          <h1 class="advantages__header advantages__header--highlight">Седона — небольшой городок в Аризоне, заслуживающий
+          <h1 class="advantages__header advantages__header--primary-margin-bottom">Седона — небольшой городок в Аризоне, заслуживающий
             большего!</h1>
           <p class="advantages__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
@@ -53,7 +52,7 @@
         <ol class="advantages__list">
           <li class="advantages__item">
             <div class="advantages__item-container advantages__item-container--primary-color">
-              <h2 class="advantages__header advantages__item-header">Настоящий<br>городок</h2>
+              <h2 class="advantages__header advantages__header--secondary-margin-bottom">Настоящий<br>городок</h2>
               <p class="advantages__description advantages__description--light-color">Седона не атракцион для туристов,
                 там течет своя жизнь</p>
             </div>
@@ -78,26 +77,26 @@
             <img class="advantages__image" src="img/bridge-mobile.jpg" width="320" height="260"
               alt="фотография моста дьявола">
             <div class="advantages__item-container advantages__item-container--primary-color">
-              <h2 class="advantages__header advantages__item-header">Там есть<br>мост дьявола</h2>
+              <h2 class="advantages__header advantages__header--secondary-margin-bottom">Там есть<br>мост дьявола</h2>
               <p class="advantages__description advantages__description--light-color">Да! По нему можно пройти! Если вы
                 осмелитесь, конечно</p>
             </div>
           </li>
           <li class="advantages__item advantages__item--small">
             <div class="advantages__item-container advantages__item-container--secondary-color">
-              <h2 class="advantages__header advantages__item-header">Небольшая<br>площадь</h2>
+              <h2 class="advantages__header advantages__header--secondary-margin-bottom">Небольшая<br>площадь</h2>
               <p class="advantages__description">Все интересные места находятся очень близко</p>
             </div>
           </li>
           <li class="advantages__item advantages__item--small">
             <div class="advantages__item-container advantages__item-container--secondary-color">
-              <h2 class="advantages__header advantages__item-header">Красивая<br>дорога</h2>
+              <h2 class="advantages__header advantages__header--secondary-margin-bottom">Красивая<br>дорога</h2>
               <p class="advantages__description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
             </div>
           </li>
           <li class="advantages__item advantages__item--small">
             <div class="advantages__item-container advantages__item-container--secondary-color">
-              <h2 class="advantages__header advantages__item-header">Мало<br>туристов</h2>
+              <h2 class="advantages__header advantages__header--secondary-margin-bottom">Мало<br>туристов</h2>
               <p class="advantages__description">Большинство едет в Гранд Каньон и толпятся там</p>
             </div>
           </li>
@@ -148,6 +147,7 @@
     </footer>
 
   </div>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
