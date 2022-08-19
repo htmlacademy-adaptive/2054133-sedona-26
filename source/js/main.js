@@ -10,8 +10,8 @@ function removeClass (element, className) {
   element.classList.remove(className);
 }
 
-//removeClass(list, "navigation__list--opened");
-//removeClass(button, "navigation__toggle--opened");
+removeClass(list, "navigation__list--opened");
+removeClass(button, "navigation__toggle--opened");
 
 button.addEventListener("click", function () {
   toggleClass(list, "navigation__list--opened");
