@@ -10,11 +10,53 @@
 
 .navigation__toggle {
   position: absolute;
-  top: 17px;
-  right: 20px;
-  width: 23px;
-  height: 22px;
+  top: 8px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
   border: none;
+  cursor: pointer;
+  background-color: @light-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    top: -15px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 9px 0 0 @primary-color, 0 18px 0 0 @primary-color;
+    background-color: @primary-color;
+  }
+
+  &--opened {
+    background-color: @primary-color;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 27px;
+      height: 4px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      background-color: @light-color;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
 
   @media @tablet {
     display: none;
