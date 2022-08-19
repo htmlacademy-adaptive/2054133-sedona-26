@@ -1,7 +1,7 @@
 .reasons {
   .list-reset();
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -11,7 +11,7 @@
 .reasons__item {
   padding: 22px 18px 22px 65px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     flex-direction: column;
     flex-basis: 33.3%;
@@ -21,13 +21,13 @@
     box-sizing: border-box;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-bottom: 80px;
   }
 }
 
 .reason__container {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 160px 20px 60px;
     max-width: 285px;
   }
@@ -38,7 +38,7 @@
   .header-common-s();
   margin-bottom: 25px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .header-common-m();
   }
 }

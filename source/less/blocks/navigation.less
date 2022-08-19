@@ -2,7 +2,7 @@
   position: absolute;
   width: 100%;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     position: static;
     align-self: center;
   }
@@ -16,7 +16,7 @@
   height: 22px;
   border: none;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: none;
   }
 }
@@ -30,7 +30,7 @@
     display: block;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     background-color: inherit;
   }
@@ -39,7 +39,7 @@
 .navigation__item {
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-basis: 25%;
 
     &--margin-right {
@@ -58,7 +58,7 @@
   text-decoration: none;
   padding: 17px 0 12px 0;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     font-size: 14px;
     line-height: 21px;
     color: #000000;
