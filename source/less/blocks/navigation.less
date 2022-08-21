@@ -40,9 +40,15 @@
     background-color: @primary-color;
   }
 
-  &--opened {
-    background-color: @primary-color;
+  &:hover {
+    opacity: 60%;
+  }
 
+  &:active {
+    opacity: 30%;
+  }
+
+  &--opened {
     &::after,
     &::before {
       content: "";
@@ -125,26 +131,36 @@
   .font-size-s();
   font-weight: 700;
   text-transform: uppercase;
-  color: @light-color;
   text-decoration: none;
+  color: @light-color;
   padding: 17px 50px 12px 50px;
 
-  &:hover {
-    color: @primary-color;
-  }
+  @media @mobile-only {
+    &:hover {
+      background-color: #669ec0;
+    }
 
-  &:focus {
-    color: #766357;
-  }
-
-  &:active {
-    color: fade(@dark-color, 30%);
+    &:active {
+      color: fade(@light-color, 30%);
+    }
   }
 
   @media @tablet {
     .font-size-xs();
     color: #000000;
     padding: 18px 10px;
+
+    &:hover {
+      color: @primary-color;
+    }
+
+    &:focus {
+      color: #766357;
+    }
+
+    &:active {
+      color: fade(@dark-color, 30%);
+    }
   }
 }
 
