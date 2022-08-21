@@ -4,11 +4,30 @@
   min-width: 285px;
   max-width: 520px;
   margin: 0 auto;
+  counter-reset: number;
+}
+
+.advantages__main-header {
+  .header-reset();
+  .header-common-s();
 }
 
 .advantages__header {
   .header-reset();
   .header-common-s();
+  position: relative;
+
+  &::before {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    position: absolute;
+    content: "— №" counter(number) " —";
+    counter-increment: number;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+  }
 
   @media @tablet {
     .header-common-m();
@@ -19,7 +38,15 @@
   }
 
   &--secondary-margin-bottom {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+  }
+}
+
+.advantages__header-transfer {
+  display: none;
+
+  @media @tablet {
+    display: inline-block;
   }
 }
 
@@ -61,12 +88,16 @@
 
 .advantages__item-container {
   text-align: center;
-  padding: 54px 18px 40px 18px;
+  padding: 54px 18px 40px;
 
   @media @tablet {
     flex-basis: 100%;
-    padding: 40px 32px 40px 32px;
+    padding: 40px 32px 40px;
     box-sizing: border-box;
+  }
+
+  @media @desktop {
+    padding: 47px 67px 56px;
   }
 }
 
