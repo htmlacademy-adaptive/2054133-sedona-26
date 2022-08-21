@@ -41,7 +41,14 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 20px 20px 15px;
-    background-color: @bg-color;
+
+    &--first-bg-color {
+      background-color: @bg-first-color;
+    }
+
+    &--second-bg-color {
+      background-color: @bg-second-color;
+    }
   }
 
   @media @desktop {
@@ -87,6 +94,7 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  padding: 10px 0;
 
   @media @tablet {
     justify-content: end;

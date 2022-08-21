@@ -90,7 +90,7 @@
   font-family: inherit;
   font-weight: 700;
   line-height: 26px;
-  background-color: @bg-color;
+  background-color: @bg-first-color;
   border: none;
   padding: 16px;
   box-sizing: border-box;
@@ -119,13 +119,18 @@
   font-family: inherit;
   font-size: 18px;
   line-height: 26px;
+  font-weight: 700;
   width: 100%;
   max-width: 770px;
   min-height: 150px;
-  background-color: @bg-color;
+  background-color: @bg-first-color;
   border: none;
   padding: 16px;
   margin: 0 auto;
+
+  &::placeholder {
+    color: fade(@dark-color, 30%);
+  }
 }
 
 .form__button {
@@ -154,13 +159,13 @@
 }
 
 .form__note {
-  display: block;
-  color: @main-text-color;
-  opacity: 60%;
+  .font-size-xxs();
+  text-transform: uppercase;
+  color: fade(@main-text-color, 60%);
   align-self: end;
 
   @media @tablet {
-    width: none;
+    color: @main-text-color;
     margin-left: auto;
     align-self: center;
   }
