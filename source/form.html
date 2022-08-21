@@ -15,11 +15,12 @@
       <a class="header__logo" href="index.html">
         <img class="header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Седона">
       </a>
-      <nav class="header__navigation navigation">
-        <button class="navigation__toggle navigation__toggle--open" type="button">
-          <span class="visually-hidden">Раскрыть меню.</span>
+      <!--navigation--nojs - в случе отключения javascript -->
+      <nav class="header__navigation navigation navigation--nojs">
+        <!--navigation__toggle--nojs - в случе отключения javascript -->
+        <button class="navigation__toggle navigation__toggle--opened navigation__toggle--nojs" type="button">
+          <span class="visually-hidden">Раскрыть меню</span>
         </button>
-        <!-- закрыть меню navigation__list--close -->
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
