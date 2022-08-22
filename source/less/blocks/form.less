@@ -187,6 +187,42 @@
   display: block;
 }
 
+.form__label-bold--checkbox {
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: @bg-first-color;
+    width: 46px;
+    height: 46px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    background-image: url("../img/input-mark.svg");
+    background-size: 22px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 46px;
+    height: 46px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+}
+
+.form__input-checkbox[type="checkbox"]:checked + .form__label-bold--checkbox::after {
+  display: block;
+}
+
 .form__textarea {
   display: block;
   font-family: inherit;
