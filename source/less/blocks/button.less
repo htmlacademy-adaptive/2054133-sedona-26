@@ -9,4 +9,13 @@
   color: @light-color;
   background-color: @primary-color;
   cursor: pointer;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: fade(@light-color, 30%);
+  }
 }
