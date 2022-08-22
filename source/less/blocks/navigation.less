@@ -26,6 +26,14 @@
     display: none;
   }
 
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -38,14 +46,6 @@
     margin: auto;
     box-shadow: 0 9px 0 0 @primary-color, 0 18px 0 0 @primary-color;
     background-color: @primary-color;
-  }
-
-  &:hover {
-    opacity: 60%;
-  }
-
-  &:active {
-    opacity: 30%;
   }
 
   &--opened {

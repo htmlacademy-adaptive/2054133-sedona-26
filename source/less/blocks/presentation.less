@@ -45,6 +45,39 @@
 
 .presentation__video {
   display: block;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   object-fit: cover;
+
+  @media @tablet {
+    height: 500px;
+    width: 648px;
+  }
+
+  @media @desktop {
+    height: 500px;
+    width: 800px;
+  }
+}
+
+.presentation__video-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.presentation__play-button {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 48px;
+  height: 54px;
+  border: none;
+  background-color: fade(@light-color, 70%);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  cursor: pointer;
 }
