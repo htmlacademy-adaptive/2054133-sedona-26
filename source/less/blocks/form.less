@@ -48,10 +48,10 @@
 
 .form__list-mark {
   .list-reset();
+  display: grid;
   gap: 16px;
 
   @media @tablet {
-    display: grid;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
   }
@@ -62,7 +62,7 @@
     }
 
     &--four-column {
-      grid-template-columns: repeat(3, 4fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
@@ -141,10 +141,50 @@
 }
 
 .form__label-bold {
+  position: relative;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  margin-left: 62px;
+  padding-left: 62px;
+  cursor: pointer;
+}
+
+.form__label-bold--radio {
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: @bg-first-color;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: @main-text-color;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 0;
+    left: 15px;
+    right: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+}
+
+.form__input-radio[type="radio"]:checked + .form__label-bold--radio::after {
+  display: block;
 }
 
 .form__textarea {
