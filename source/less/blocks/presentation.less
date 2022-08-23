@@ -43,27 +43,8 @@
   margin: 0;
 }
 
-.presentation__video {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  object-fit: cover;
-
-  @media @tablet {
-    height: 500px;
-    width: 648px;
-  }
-
-  @media @desktop {
-    height: 500px;
-    width: 800px;
-  }
-}
-
 .presentation__video-container {
   position: relative;
-  cursor: pointer;
 }
 
 .presentation__play-button {
@@ -80,4 +61,23 @@
   background-color: fade(@light-color, 70%);
   clip-path: polygon(0 0, 100% 50%, 0 100%);
   cursor: pointer;
+}
+
+.presentation__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+  cursor: pointer;
+
+  @media @tablet {
+    height: 500px;
+    width: 648px;
+  }
+
+  @media @desktop {
+    height: 500px;
+    width: 800px;
+  }
 }

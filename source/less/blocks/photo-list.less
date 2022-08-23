@@ -96,6 +96,14 @@
   align-items: center;
   padding: 10px 0;
 
+  &:hover .photo-list__like-icon {
+    fill: @primary-color;
+  }
+
+  &:active .photo-list__like-icon {
+    opacity: 50%;
+  }
+
   @media @tablet {
     justify-content: end;
     padding-left: 0;
