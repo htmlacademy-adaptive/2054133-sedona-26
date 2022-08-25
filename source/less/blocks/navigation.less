@@ -155,12 +155,13 @@
       color: @primary-color;
     }
 
-    &:focus {
-      color: #766357;
-    }
-
     &:active {
       color: fade(@dark-color, 30%);
+    }
+
+    &--current,
+    &--current:hover {
+      color: #766357;
     }
   }
 }
