@@ -53,53 +53,69 @@
           <fieldset class="form__fieldset form__fieldset--narrow">
             <legend class="form__legend">Представьесь:</legend>
             <label class="form__label-thin" for="name">Имя*:
-              <input class="form__input-area" type="text" id="name" name="name" value="Петр" placeholder="Введите ваше имя">
+              <input class="form__input-area" type="text" id="name" name="name" value="Петр"
+                placeholder="Введите ваше имя">
             </label>
             <label class="form__label-thin" for="surname">Фамилия*:
-              <input class="form__input-area" type="text" id="surname" name="surname" value="Пустота" placeholder="Введите вашу фамилию">
+              <input class="form__input-area" type="text" id="surname" name="surname" value="Пустота"
+                placeholder="Введите вашу фамилию">
             </label>
             <label class="form__label-thin" for="patronymic">Отчество:
-              <input class="form__input-area" type="text" id="patronymic" name="patronymic" value="Викторович" placeholder="Введите ваше отчество">
+              <input class="form__input-area" type="text" id="patronymic" name="patronymic" value="Викторович"
+                placeholder="Введите ваше отчество">
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--narrow">
             <legend class="form__legend">Контактная информация:</legend>
-                <label class="form__label-thin form__label-thin--phone" for="phone">Контактный телефон*:
-                  <input class="form__input-area" type="tel" id="phone" name="phone" placeholder="Введите телефон">
-                </label>
-                <label class="form__label-thin form__label-thin--mail" for="mail">Электронная почта*:
-                  <input class="form__input-area" type="email" id="mail" name="mail" placeholder="Введите e-mail">
-                </label>
-          </fieldset>
-          <fieldset class="form__fieldset form__fieldset--wide form__fieldset--radio">
-            <legend class="form__legend form__legend--wide">Ваше общее впечатление:</legend>
-                <label class="form__label-bold form__label-bold--radio" for="positive">Скорее положительное
-                  <input class="form__input-radio visually-hidden" type="radio" id="positive" name="impression" value="positive" checked>
-                </label>
-                <label class="form__label-bold form__label-bold--radio" for="negative">Скорее отрицательное
-                  <input class="form__input-radio visually-hidden" type="radio" id="negative" name="impression" value="negative">
-                </label>
-                <label class="form__label-bold form__label-bold--radio" for="difficult">Затрудняюсь ответить
-                  <input class="form__input-radio visually-hidden" type="radio" id="difficult" name="impression" value="difficult">
-                </label>
-          </fieldset>
-          <fieldset class="form__fieldset form__fieldset--wide form__fieldset--checkbox">
-            <legend class="form__legend form__legend--wide">Посещенные<br>достопримечательности:</legend>
-                <label class="form__label-bold form__label-bold--checkbox" for="bridge">Мост Дьявола
-                  <input class="form__input-checkbox visually-hidden" type="checkbox" id="bridge" name="attraction" value="bridge-of-devil" checked>
-                </label>
-                <label class="form__label-bold form__label-bold--checkbox" for="mountian-bell">Гора-Колокол
-                  <input class="form__input-checkbox visually-hidden" type="checkbox" id="mountian-bell" name="attraction" value="mountian-bell" checked>
-                </label>
-                <label class="form__label-bold form__label-bold--checkbox" for="slide-park">Слайд-парк
-                  <input class="form__input-checkbox visually-hidden" type="checkbox" id="slide-park" name="attraction" value="slide-park" checked>
-                </label>
-                <label class="form__label-bold form__label-bold--checkbox" for="red-rocks">Красные скалы
-                  <input class="form__input-checkbox visually-hidden" type="checkbox" id="red-rocks" name="attraction" value="red-rocks">
-                </label>
+            <label class="form__label-thin form__label-thin--phone" for="phone">Контактный телефон*:
+              <input class="form__input-area" type="tel" id="phone" name="phone" placeholder="Введите телефон">
+            </label>
+            <label class="form__label-thin form__label-thin--mail" for="mail">Электронная почта*:
+              <input class="form__input-area" type="email" id="mail" name="mail" placeholder="Введите e-mail">
+            </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--wide">
-            <legend class="form__legend form__legend--wide">Опишите свои эмоции:</legend>
+            <span><legend class="form__legend form__legend--wide">Ваше общее впечатление:</legend></span>
+            <div class="form__fieldset--radio">
+              <input class="form__input-radio visually-hidden" type="radio" id="positive" name="impression"
+              value="positive" checked>
+              <label class="form__label-bold form__label-bold--radio" for="positive">Скорее положительное
+              </label>
+              <input class="form__input-radio visually-hidden" type="radio" id="negative" name="impression"
+              value="negative">
+              <label class="form__label-bold form__label-bold--radio" for="negative">Скорее отрицательное
+              </label>
+              <input class="form__input-radio visually-hidden" type="radio" id="difficult" name="impression"
+              value="difficult">
+              <label class="form__label-bold form__label-bold--radio" for="difficult">Затрудняюсь ответить
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--wide">
+            <span>
+              <legend class="form__legend form__legend--wide">Посещенные<br>достопримечательности:</legend>
+            </span>
+            <div class="form__fieldset--checkbox">
+              <input class="form__input-checkbox visually-hidden" type="checkbox" id="bridge" name="attraction"
+              value="bridge-of-devil" checked>
+              <label class="form__label-bold form__label-bold--checkbox" for="bridge">Мост Дьявола
+              </label>
+              <input class="form__input-checkbox visually-hidden" type="checkbox" id="mountian-bell" name="attraction"
+              value="mountian-bell" checked>
+              <label class="form__label-bold form__label-bold--checkbox" for="mountian-bell">Гора-Колокол
+              </label>
+              <input class="form__input-checkbox visually-hidden" type="checkbox" id="slide-park" name="attraction"
+              value="slide-park" checked>
+              <label class="form__label-bold form__label-bold--checkbox" for="slide-park">Слайд-парк
+              </label>
+              <input class="form__input-checkbox visually-hidden" type="checkbox" id="red-rocks" name="attraction"
+              value="red-rocks">
+              <label class="form__label-bold form__label-bold--checkbox" for="red-rocks">Красные скалы
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--wide">
+            <span><legend class="form__legend form__legend--wide">Опишите свои эмоции:</legend></span>
             <textarea class="form__textarea" name="emotion" cols="15" rows="7"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>

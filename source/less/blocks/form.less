@@ -18,26 +18,38 @@
   margin: 0;
   padding: 0;
 
+  &--radio {
+    display: grid;
+    gap: 16px;
+  }
+
+  &--checkbox {
+    display: grid;
+    gap: 16px;
+  }
+
   @media @tablet {
     &--wide {
+      display: grid;
       grid-column: 1/-1;
       align-items: center;
+      // margin: 0 auto;
     }
 
     &--radio {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      padding-left: 36px;
-      // margin: 0 auto;
+      // padding-left: 36px;
+      margin: 0 auto;
     }
 
     &--checkbox {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px 32px;
-      padding-left: 84px;
-      // margin: 0 auto;
+      // padding-left: 84px;
+      margin: 0 auto;
     }
 
     //     &--wide {
@@ -111,8 +123,7 @@
     &--wide::after {
       position: absolute;
       content: "";
-      // background-color: #e5e5e5;
-      background-color: black;
+      background-color: #e5e5e5;
       height: 1px;
       width: 100%;
       top: 50%;
@@ -208,9 +219,9 @@
 .form__label-bold--radio {
   box-sizing: border-box;
 
-  @media @tablet {
-    max-width: 280px;
-  }
+  // @media @tablet {
+  //   // max-width: 280px;
+  // }
 
   &::before {
     position: absolute;
@@ -252,13 +263,13 @@
 .form__label-bold--checkbox {
   box-sizing: border-box;
 
-  @media @tablet {
-    max-width: 224px;
-  }
+  // @media @tablet {
+  //   // max-width: 224px;
+  // }
 
-  @media @desktop {
-    max-width: 172px;
-  }
+  // @media @desktop {
+  //   // max-width: 172px;
+  // }
 
 
   &::before {
