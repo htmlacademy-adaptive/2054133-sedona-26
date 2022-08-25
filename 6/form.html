@@ -52,7 +52,9 @@
         </div>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form__fieldset form__fieldset--narrow">
-            <legend class="form__legend">Представьесь:</legend>
+            <div>
+              <legend class="form__legend">Представьесь:</legend>
+            </div>
             <label class="form__label-thin" for="name">Имя*:
               <input class="form__input-area" type="text" id="name" name="name" value="Петр"
                 placeholder="Введите ваше имя">
@@ -67,7 +69,9 @@
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--narrow">
-            <legend class="form__legend">Контактная информация:</legend>
+            <div>
+              <legend class="form__legend">Контактная информация:</legend>
+            </div>
             <label class="form__label-thin form__label-thin--phone" for="phone">Контактный телефон*:
               <input class="form__input-area" type="tel" id="phone" name="phone" placeholder="Введите телефон">
             </label>
@@ -76,47 +80,51 @@
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--wide">
-            <span><legend class="form__legend form__legend--wide">Ваше общее впечатление:</legend></span>
+            <div class="form__legend-container">
+              <legend class="form__legend form__legend--wide">Ваше общее впечатление:</legend>
+            </div>
             <div class="form__fieldset--radio">
               <input class="form__input-radio visually-hidden" type="radio" id="positive" name="impression"
-              value="positive" checked>
+                value="positive" checked>
               <label class="form__label-bold form__label-bold--radio" for="positive">Скорее положительное
               </label>
               <input class="form__input-radio visually-hidden" type="radio" id="negative" name="impression"
-              value="negative">
+                value="negative">
               <label class="form__label-bold form__label-bold--radio" for="negative">Скорее отрицательное
               </label>
               <input class="form__input-radio visually-hidden" type="radio" id="difficult" name="impression"
-              value="difficult">
+                value="difficult">
               <label class="form__label-bold form__label-bold--radio" for="difficult">Затрудняюсь ответить
               </label>
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--wide">
-            <span>
+            <div class="form__legend-container">
               <legend class="form__legend form__legend--wide">Посещенные<br>достопримечательности:</legend>
-            </span>
+            </div>
             <div class="form__fieldset--checkbox">
               <input class="form__input-checkbox visually-hidden" type="checkbox" id="bridge" name="attraction"
-              value="bridge-of-devil" checked>
+                value="bridge-of-devil" checked>
               <label class="form__label-bold form__label-bold--checkbox" for="bridge">Мост Дьявола
               </label>
               <input class="form__input-checkbox visually-hidden" type="checkbox" id="mountian-bell" name="attraction"
-              value="mountian-bell" checked>
+                value="mountian-bell" checked>
               <label class="form__label-bold form__label-bold--checkbox" for="mountian-bell">Гора-Колокол
               </label>
               <input class="form__input-checkbox visually-hidden" type="checkbox" id="slide-park" name="attraction"
-              value="slide-park" checked>
+                value="slide-park" checked>
               <label class="form__label-bold form__label-bold--checkbox" for="slide-park">Слайд-парк
               </label>
               <input class="form__input-checkbox visually-hidden" type="checkbox" id="red-rocks" name="attraction"
-              value="red-rocks">
+                value="red-rocks">
               <label class="form__label-bold form__label-bold--checkbox" for="red-rocks">Красные скалы
               </label>
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--wide">
-            <span><legend class="form__legend form__legend--wide">Опишите свои эмоции:</legend></span>
+            <div class="form__legend-container">
+              <legend class="form__legend form__legend--wide">Опишите свои эмоции:</legend>
+            </div>
             <textarea class="form__textarea" name="emotion" cols="15" rows="7"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
