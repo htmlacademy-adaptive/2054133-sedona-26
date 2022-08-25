@@ -269,6 +269,10 @@
   display: block;
 }
 
+.form__input-radio[type="radio"]:focus + .form__label-bold--radio::before {
+  background-color: #e5e5e5;
+}
+
 .form__label-bold--checkbox {
   box-sizing: border-box;
 
@@ -305,6 +309,10 @@
 
 .form__input-checkbox[type="checkbox"]:checked + .form__label-bold--checkbox::after {
   display: block;
+}
+
+.form__input-checkbox[type="checkbox"]:focus + .form__label-bold--checkbox::before {
+  background-color: #e5e5e5;
 }
 
 .form__textarea {
