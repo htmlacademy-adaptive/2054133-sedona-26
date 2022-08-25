@@ -2,6 +2,19 @@
   display: flex;
   background-color: @substrate-color;
   padding: 90px 20px 85px 20px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/hero-mask.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
 
   &--background-large {
     background-image: url("../img/intro.jpg");

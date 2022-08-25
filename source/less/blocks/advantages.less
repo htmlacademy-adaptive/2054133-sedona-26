@@ -74,6 +74,21 @@
 
 .advantages__list {
   .list-reset();
+  position: relative;
+
+  @media @mobile-only {
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../img/catalog-mask.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 0;
+      left: 0;
+      height: 37px;
+      width: 100%;
+    }
+  }
 
   @media @tablet {
     display: flex;
