@@ -1,50 +1,101 @@
 .reasons {
   .list-reset();
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    max-width: 100%;
   }
 }
 
 .reasons__item {
-  padding: 22px 18px 22px 65px;
+  position: relative;
+  padding: 22px 18px 22px 47px;
 
-  @media (min-width: @tablet-width) {
+  &--house::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/house.svg");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    top: 13px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @media @tablet {
+      background-size: 80px;
+      top: 60px;
+      left: calc(50% - 40px);
+    }
+  }
+
+  &--food::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/burger.svg");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    top: 13px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @media @tablet {
+      background-size: 80px;
+      top: 60px;
+      left: calc(50% - 40px);
+    }
+  }
+
+  &--souvenirs::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/present.svg");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    top: 13px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @media @tablet {
+      background-size: 80px;
+      top: 60px;
+      left: calc(50% - 40px);
+    }
+  }
+
+  @media @tablet {
     display: flex;
     flex-direction: column;
-    flex-basis: 33.3%;
+    flex-basis: 33.33%;
     text-align: center;
     max-width: 400px;
-    padding: 160px 20px 60px;
+    padding: 160px 30px 60px;
     box-sizing: border-box;
   }
 
-  @media (min-width: @desktop-width) {
-    padding-bottom: 80px;
-  }
-}
-
-.reason__container {
-  @media (min-width: @tablet-width) {
-    padding: 160px 20px 60px;
-    max-width: 285px;
+  @media @desktop {
+    padding: 160px 55px 80px;
   }
 }
 
 .reasons__header {
-  .header-common-s();
-  margin-bottom: 25px;
+  .header-reset();
+  .font-size-s();
+  margin-bottom: 16px;
 
-  @media (min-width: @tablet-width) {
-    .header-common-m();
+  @media @tablet {
+    .font-size-m();
   }
 }
 
 .reasons__description {
-  font-size: 14px;
-  line-height: 21px;
+  .font-size-xs();
   text-transform: uppercase;
   margin: 0;
 }

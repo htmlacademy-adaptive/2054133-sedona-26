@@ -2,11 +2,11 @@
   max-width: 87.5%;
   margin: 0 auto;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     max-width: 84.5%;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     max-width: 80%;
   }
 }
@@ -14,21 +14,22 @@
 .feedback__container {
   text-align: center;
   padding-top: 36px;
-  padding-bottom: 28px;
+  padding-bottom: 53px;
   max-width: 435px;
   margin: 0 auto;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-bottom: 102px;
   }
 }
 
 .feedback__header {
-  .header-common-s();
+  .header-reset();
+  .font-size-s();
   margin-bottom: 24px;
 
-  @media (min-width: @tablet-width) {
-    .header-common-l();
+  @media @tablet {
+    .font-size-l();
     margin-bottom: 20px;
   }
 }

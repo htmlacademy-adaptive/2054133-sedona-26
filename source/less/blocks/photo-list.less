@@ -2,7 +2,7 @@
   .list-reset();
   width: 100%;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     flex-wrap: wrap;
   }
@@ -12,7 +12,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-basis: 50%;
     padding-top: 0;
     padding-bottom: 0;
@@ -22,8 +22,9 @@
     flex-basis: 100%;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     flex-basis: 33.33%;
+    position: relative;
   }
 }
 
@@ -36,50 +37,98 @@
 .photo-list__item-container {
   padding-top: 15px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 20px 20px 15px;
-    background-color: #f2f2f2;
+
+    &--first-bg-color {
+      background-color: @bg-first-color;
+    }
+
+    &--second-bg-color {
+      background-color: @bg-second-color;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    background-color: rgba(0, 0, 0, 0.3);
+  @media @desktop {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: fade(@dark-color, 30%);
   }
 }
 
 .photo-list__title {
-  .header-common-s();
+  .header-reset();
+  .font-size-xs;
   grid-column: 1/2;
+
+  @media @desktop {
+    color: @light-color;
+  }
 }
 
 .photo-list__author {
-  font-size: 14px;
-  line-height: 21px;
+  .font-size-xs;
   color: @main-text-color;
   margin: 0;
   padding-bottom: 11px;
   grid-column: 1/2;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-bottom: 0;
+  }
+
+  @media @desktop {
+    color: @light-color;
   }
 }
 
 .photo-list__like-link {
-  font-size: 14px;
-  line-height: 21px;
+  .font-size-xs;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
-  padding-left: 37px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
 
-  @media (min-width: @tablet-width) {
+  &:hover .photo-list__like-icon {
+    fill: @primary-color;
+  }
+
+  &:active .photo-list__like-icon {
+    opacity: 50%;
+  }
+
+  @media @tablet {
+    justify-content: end;
     padding-left: 0;
     grid-column: 2/3;
     grid-row: 1/3;
     text-align: end;
     align-self: center;
+  }
+
+  @media @desktop {
+    color: @light-color;
+  }
+}
+
+.photo-list__like-icon {
+  fill: fade(@dark-color, 30%);
+  margin-right: 14px;
+  margin-top: -10px;
+
+  @media @tablet {
+    margin-right: 9px;
+    margin-top: -8px;
+  }
+
+  @media @desktop {
+    fill: @light-color;
   }
 }

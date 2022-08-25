@@ -1,8 +1,13 @@
 .navigation {
   position: absolute;
   width: 100%;
+  z-index: 2;
 
-  @media (min-width: @tablet-width) {
+  &--nojs {
+    position: static;
+  }
+
+  @media @tablet {
     position: static;
     align-self: center;
   }
@@ -10,22 +15,86 @@
 
 .navigation__toggle {
   position: absolute;
-  top: 17px;
-  right: 20px;
-  width: 23px;
-  height: 22px;
+  top: 8px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
   border: none;
+  cursor: pointer;
+  background-color: transparent;
 
-  @media (min-width: @tablet-width) {
+  &--nojs {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    top: -18px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 9px 0 0 @primary-color, 0 18px 0 0 @primary-color;
+    background-color: @primary-color;
+  }
+
+  &--opened {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 27px;
+      height: 4px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      box-shadow: none;
+      background-color: @light-color;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media @tablet {
     display: none;
   }
 }
 
 .navigation__list {
   .list-reset();
+  display: none;
   background-color: @primary-color;
 
-  @media (min-width: @tablet-width) {
+
+  @media @tablet {
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  @media @tablet {
     display: flex;
     background-color: inherit;
   }
@@ -34,7 +103,22 @@
 .navigation__item {
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media @mobile-only {
+    margin-bottom: 1px;
+    box-shadow: 0 1px 0 0 fade(@dark-color, 20%), inset 0 1px 0 0 fade(@light-color, 20%);
+
+    &:first-child {
+      box-shadow: 0 1px 0 0 fade(@dark-color, 20%);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      box-shadow: inset 0 1px 0 0 fade(@light-color, 20%);
+      background: linear-gradient(0deg, fade(@dark-color, 20%), fade(@dark-color, 0%) 15%);
+    }
+  }
+
+  @media @tablet {
     flex-basis: 25%;
 
     &--margin-right {
@@ -45,19 +129,39 @@
 
 .navigation__link {
   display: block;
-  font-size: 18px;
-  line-height: 26px;
+  .font-size-s();
   font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff;
   text-decoration: none;
-  padding: 17px 0 12px 0;
+  color: @light-color;
+  padding: 17px 50px 12px 50px;
 
-  @media (min-width: @tablet-width) {
-    font-size: 14px;
-    line-height: 21px;
+  @media @mobile-only {
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      color: fade(@light-color, 30%);
+    }
+  }
+
+  @media @tablet {
+    .font-size-xs();
     color: #000000;
-    padding: 18px 0;
+    padding: 18px 10px;
+
+    &:hover {
+      color: @primary-color;
+    }
+
+    &:focus {
+      color: #766357;
+    }
+
+    &:active {
+      color: fade(@dark-color, 30%);
+    }
   }
 }
 

@@ -1,9 +1,12 @@
 .header {
   position: relative;
-  min-height: 56px;
   width: 100%;
 
-  @media (min-width: @tablet-width) {
+  @media @mobile-only {
+    padding-bottom: 56px;
+  }
+
+  @media @tablet {
     display: flex;
   }
 }
@@ -13,4 +16,13 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
+
+  @media @mobile-only {
+    bottom: -40px;
+  }
+}
+
+.header__logo-image {
+  display: block;
 }

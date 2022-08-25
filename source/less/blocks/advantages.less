@@ -1,43 +1,96 @@
 .advantages__container {
-  padding: 39px 20px 33px 20px;
+  padding: 39px 25px 33px;
   text-align: center;
-  min-width: 285px;
   max-width: 520px;
   margin: 0 auto;
+  counter-reset: number;
+}
+
+.advantages__main-header {
+  .header-reset();
+  .font-size-s();
 }
 
 .advantages__header {
-  .header-common-s();
+  .header-reset();
+  .font-size-s();
+  position: relative;
 
-  @media (min-width: @tablet-width) {
-    .header-common-m();
+  &::before {
+    .font-size-xs;
+    font-weight: 400;
+    position: absolute;
+    content: "— №" counter(number) " —";
+    counter-increment: number;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
   }
 
-  &--highlight {
+  @media @mobile-only {
+    br {
+      display: none;
+    }
+  }
+
+  @media @tablet {
+    .font-size-m();
+  }
+
+  &--primary-margin-bottom {
     margin-bottom: 11px;
+  }
+
+  &--secondary-margin-bottom {
+    margin-bottom: 60px;
   }
 }
 
-.advantages__item-header {
-  margin-bottom: 50px;
+.advantages__header-transfer {
+  display: none;
+
+  @media @tablet {
+    display: inline-block;
+  }
 }
 
 .advantages__description {
-  font-size: 14px;
-  line-height: 21px;
+  .font-size-xs;
   text-transform: uppercase;
   color: @main-text-color;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media @mobile-only {
+    br {
+      display: inline-block;
+    }
+  }
 }
 
 .advantages__description--light-color {
-  color: #ffffff;
+  color: @light-color;
 }
 
 .advantages__list {
   .list-reset();
+  position: relative;
 
-  @media (min-width: @tablet-width) {
+  @media @mobile-only {
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../img/catalog-mask.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 0;
+      left: 0;
+      height: 37px;
+      width: 100%;
+    }
+  }
+
+  @media @tablet {
     display: flex;
     flex-wrap: wrap;
   }
@@ -48,33 +101,37 @@
   flex-direction: column;
   width: 100%;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-direction: row;
     flex-wrap: wrap;
 
     &--small {
-      flex-basis: 33.3%;
+      flex-basis: 33.33%;
     }
   }
 }
 
 .advantages__item-container {
   text-align: center;
-  padding: 54px 18px 40px 18px;
+  padding: 54px 30px 40px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-basis: 100%;
-    padding: 40px 32px 40px 32px;
+    padding: 40px 32px 40px;
     box-sizing: border-box;
+  }
+
+  @media @desktop {
+    padding: 47px 67px 56px;
   }
 }
 
 .advantages__item-container--primary-color {
-  color: #ffffff;
+  color: @light-color;
   background-color: @primary-color;
 
-  @media (min-width: @tablet-width) {
-    flex-basis: 33.3%;
+  @media @tablet {
+    flex-basis: 33.33%;
   }
 }
 
@@ -84,7 +141,7 @@
 
 .advantages__image {
   display: block;
-  flex-basis: 66.6%;
+  flex-basis: 66.66%;
   background-color: @substrate-color;
   align-self: center;
   object-fit: cover;

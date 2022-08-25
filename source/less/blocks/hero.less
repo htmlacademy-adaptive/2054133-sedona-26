@@ -2,18 +2,45 @@
   display: flex;
   background-color: @substrate-color;
   padding: 90px 20px 85px 20px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/hero-mask.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
 
   &--background-large {
-    background-image: url("../img/hero-background-large-mobile.jpg");
+    background-image: url("../img/intro.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--background-small {
-    background-image: url("../img/hero-background-small-mobile.jpg");
+    background-image: url("../img/intro.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
   }
+
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   background-image: url("../img/hero-mask.svg");
+  //   background-size: 1200px 57px;
+  //   background-repeat: no-repeat;
+  //   width: 1200px;
+  //   height: 57px;
+  //   bottom: -1px;
+  //   left: calc(50% - 600px);
+  // }
 }
 
 .hero__image {

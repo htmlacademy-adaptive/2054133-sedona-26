@@ -2,7 +2,7 @@
   text-align: center;
   align-self: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     width: 640px;
   }
 }
@@ -10,24 +10,24 @@
 .modal-confirmation__container {
   padding: 45px 40px 35px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 57px 100px 35px;
   }
 }
 
 .modal-confirmation__header {
-  .header-common-s();
+  .header-reset();
+  .font-size-s();
   margin-bottom: 37px;
 
-  @media (min-width: @tablet-width) {
-    .header-common-l();
+  @media @tablet {
+    .font-size-l();
     margin-bottom: 37px;
   }
 }
 
 .modal-confirmation__description {
-  font-size: 14px;
-  line-height: 21px;
+  .font-size-xs();
   text-transform: uppercase;
   color: @main-text-color;
   margin: 0;
@@ -37,7 +37,7 @@
   padding: 20px;
   background-color: @secondary-color;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 45px 90px;
   }
 }
