@@ -163,13 +163,14 @@
     color: fade(@dark-color, 30%);
   }
 
-  &:focus {
-    box-shadow: inset 0 0 0 4px #e5e5e5;
-    outline: none;
+  &:hover {
+    background-color: @input-hover-color;
   }
 
-  &:hover {
-    background-color: #e5e5e5;
+  &:focus {
+    box-shadow: inset 0 0 0 4px @input-hover-color;
+    background-color: @light-color;
+    outline: none;
   }
 }
 
