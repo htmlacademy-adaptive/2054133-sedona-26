@@ -2,7 +2,8 @@
   padding: 39px 25px 33px;
   text-align: center;
   max-width: 520px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   counter-reset: number;
 }
 
@@ -112,6 +113,9 @@
 }
 
 .advantages__item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   padding: 54px 30px 40px;
 
@@ -139,14 +143,24 @@
   background-color: @secondary-color;
 }
 
-.advantages__image {
-  display: block;
+.advantages__item-image-container {
   flex-basis: 66.66%;
+
+  &--order {
+    @media @tablet {
+      order: -1;
+    }
+  }
+}
+
+.advantages__image {
+  width: 100%;
+  display: block;
   background-color: @substrate-color;
-  align-self: center;
-  object-fit: cover;
 }
 
 .advantages__item-reasons {
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }

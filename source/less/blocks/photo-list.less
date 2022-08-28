@@ -30,8 +30,8 @@
 
 .photo-list__image {
   display: block;
-  object-fit: cover;
   width: 100%;
+  background-color: @substrate-color;
 }
 
 .photo-list__item-container {
@@ -89,12 +89,14 @@
 .photo-list__like-link {
   .font-size-xs;
   font-weight: 700;
-  color: #000000;
+  color: @dark-color;
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
   align-items: center;
-  padding: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: fit-content;
 
   &:hover .photo-list__like-icon {
     fill: @primary-color;
@@ -106,11 +108,11 @@
 
   @media @tablet {
     justify-content: end;
-    padding-left: 0;
     grid-column: 2/3;
     grid-row: 1/3;
     text-align: end;
     align-self: center;
+    margin-left: auto;
   }
 
   @media @desktop {
