@@ -55,30 +55,35 @@
         </div>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form__fieldset form__fieldset--narrow">
-            <div>
+            <div class="form__legend-container">
               <legend class="form__legend">Представьесь:</legend>
             </div>
-            <label class="form__label-thin" for="name">Имя*:
-              <input class="form__input-area" type="text" id="name" name="name" value="Петр"
+            <label class="form__label-thin" for="name">
+              <span class="form__label-description">Имя*:</span>
+              <input class="form__input-area" type="text" id="name" name="name" value="Пётр"
                 placeholder="Введите ваше имя">
             </label>
-            <label class="form__label-thin" for="surname">Фамилия*:
+            <label class="form__label-thin" for="surname">
+              <span class="form__label-description">Фамилия*:</span>
               <input class="form__input-area" type="text" id="surname" name="surname" value="Пустота"
                 placeholder="Введите вашу фамилию">
             </label>
-            <label class="form__label-thin" for="patronymic">Отчество:
+            <label class="form__label-thin" for="patronymic">
+              <span class="form__label-description">Отчество:</span>
               <input class="form__input-area" type="text" id="patronymic" name="patronymic" value="Викторович"
                 placeholder="Введите ваше отчество">
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--narrow">
-            <div>
+            <div class="form__legend-container">
               <legend class="form__legend">Контактная информация:</legend>
             </div>
-            <label class="form__label-thin form__label-thin--phone" for="phone">Контактный телефон*:
+            <label class="form__label-thin form__label-thin--phone" for="phone">
+              <span class="form__label-description">Контактный телефон*:</span>
               <input class="form__input-area" type="tel" id="phone" name="phone" placeholder="Введите телефон">
             </label>
-            <label class="form__label-thin form__label-thin--mail" for="mail">Электронная почта*:
+            <label class="form__label-thin form__label-thin--mail" for="mail">
+              <span class="form__label-description">Электронная почта*:</span>
               <input class="form__input-area" type="email" id="mail" name="mail" placeholder="Введите e-mail">
             </label>
           </fieldset>
@@ -128,7 +133,7 @@
             <div class="form__legend-container">
               <legend class="form__legend form__legend--wide">Опишите свои эмоции:</legend>
             </div>
-            <textarea class="form__textarea" name="emotion" cols="15" rows="7"
+            <textarea class="form__textarea" name="emotion" cols="15" rows="5"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <div class="form__button-container">

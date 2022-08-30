@@ -28,6 +28,14 @@
     gap: 16px;
   }
 
+  &--narrow:first-child {
+    padding-bottom: 16px;
+  }
+
+  &--narrow {
+    padding-bottom: 10px;
+  }
+
   @media @tablet {
     &--narrow:nth-child(odd)::before {
       position: absolute;
@@ -75,6 +83,10 @@
       gap: 16px 32px;
     }
   }
+}
+
+.form__label-description {
+  margin-left: 15px;
 }
 
 .form__item-mark {
@@ -128,7 +140,7 @@
 
 .form__legend-container {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 4px;
 
   @media @tablet {
     margin-bottom: 28px;
@@ -325,11 +337,13 @@
   font-weight: 700;
   width: 100%;
   max-width: 770px;
-  min-height: 150px;
+  height: 150px;
   background-color: @bg-first-color;
   border: none;
   padding: 16px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6px;
   resize: none;
   box-sizing: border-box;
 
