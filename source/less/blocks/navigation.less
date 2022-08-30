@@ -112,9 +112,19 @@
     }
 
     &:last-child {
+      position: relative;
       margin-bottom: 0;
       box-shadow: inset 0 1px 0 0 fade(@light-color, 20%);
-      background: linear-gradient(0deg, fade(@dark-color, 20%), fade(@dark-color, 0%) 15%);
+    }
+
+    &:last-child::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 7px;
+      background: linear-gradient(0deg, fade(@dark-color, 20%), fade(@dark-color, 0%) 100%);
     }
   }
 
