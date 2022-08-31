@@ -47,24 +47,30 @@
       right: -43px;
     }
 
+    &--narrow {
+      margin-bottom: 6px;
+    }
+
     &--wide {
       display: grid;
       grid-column: 1/-1;
       align-items: center;
-      // margin: 0 auto;
     }
 
     &--radio {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 280px 280px;
       gap: 16px;
-      // padding-left: 36px;
       margin: 0 auto;
+    }
+
+    &--indent {
+      margin-bottom: 7px;
     }
 
     &--checkbox {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 224px 224px;
       gap: 16px 32px;
       margin: 0 auto;
     }
@@ -105,14 +111,6 @@
   margin-right: auto;
   background-color: @light-color;
 
-  &--narrow {
-    margin-bottom: 20px;
-
-    @media @tablet {
-      margin-bottom: 28px;
-    }
-  }
-
   &::before {
     position: absolute;
     content: "";
@@ -135,6 +133,14 @@
     &--wide {
       position: relative;
     }
+
+    &--indent-right {
+      margin-left: -40px;
+    }
+
+    &--indent-left {
+      margin-left: 40px;
+    }
   }
 }
 
@@ -145,7 +151,15 @@
   @media @tablet {
     margin-bottom: 28px;
 
-    &::before {
+    &--narrow {
+      margin-bottom: 12px;
+    }
+
+    &--wide {
+      margin-bottom: 12px;
+    }
+
+    &--wide::before {
       position: absolute;
       content: "";
       background-color: #e5e5e5;
@@ -360,15 +374,25 @@
     background-color: @light-color;
     outline: none;
   }
+
+  @media @tablet {
+    height: 160px;
+    margin-bottom: 5px;
+  }
 }
 
 .form__button {
   display: block;
   width: 100%;
   max-width: 325px;
-  padding: 18px 0 14px 0;
+  padding: 18px 10px 14px;
   margin-bottom: 1px;
   cursor: pointer;
+
+  @media @tablet {
+    padding-right: 22px;
+    margin-bottom: 0;
+  }
 
   @media @desktop {
     max-width: 385px;
@@ -395,8 +419,9 @@
   align-self: end;
 
   @media @tablet {
+    font-size: 14px;
     color: @main-text-color;
     margin-left: auto;
-    align-self: center;
+    margin-bottom: 14px;
   }
 }
