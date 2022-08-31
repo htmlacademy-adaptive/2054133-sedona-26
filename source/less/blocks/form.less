@@ -7,6 +7,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 42px 88px;
   }
+
+  @media @desktop {
+    grid-template-columns: 430px 402px;
+    gap: 56px 128px;
+  }
 }
 
 .form__fieldset {
@@ -44,7 +49,7 @@
       width: 1px;
       height: 100%;
       top: 0;
-      right: -43px;
+      right: -64px;
     }
 
     &--narrow {
@@ -62,10 +67,7 @@
       grid-template-columns: 280px 280px;
       gap: 16px;
       margin: 0 auto;
-    }
-
-    &--indent {
-      margin-bottom: 7px;
+      padding-bottom: 7px;
     }
 
     &--checkbox {
@@ -77,16 +79,22 @@
   }
 
   @media @desktop {
+    &--narrow {
+      margin-bottom: 0;
+    }
+
     &--radio {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 28px;
+      padding-bottom: 16px;
     }
 
     &--checkbox {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 16px 32px;
+      padding-bottom: 32px;
     }
   }
 }
@@ -142,11 +150,22 @@
       margin-left: 40px;
     }
   }
+
+  @media @desktop {
+    &--indent-right {
+      margin-left: -31px;
+    }
+
+    &--indent-left {
+      margin-left: 64px;
+    }
+  }
 }
 
 .form__legend-container {
   position: relative;
   margin-bottom: 4px;
+  grid-column: 1/-1;
 
   @media @tablet {
     margin-bottom: 28px;
@@ -167,6 +186,20 @@
       width: 100%;
       top: 50%;
       right: 0;
+    }
+  }
+
+  @media @desktop {
+    &--wide {
+      margin-bottom: 28px;
+    }
+
+    &--indent {
+      margin-bottom: 44px;
+    }
+
+    &--second-indent {
+      margin-bottom: 11px;
     }
   }
 }
