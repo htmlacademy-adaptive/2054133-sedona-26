@@ -3,15 +3,19 @@
   text-align: center;
 
   @media @tablet {
-    padding: 60px 20px 75px;
+    padding: 60px 20px 58px;
   }
 }
 
 .offer__container {
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 33px;
+  padding-bottom: 33px;
   max-width: 435px;
+
+  @media @tablet {
+    padding-bottom: 43px;
+  }
 }
 
 .offer__header {
@@ -21,7 +25,7 @@
 
   @media @tablet {
     .font-size-l();
-    margin-bottom: 38px;
+    margin-bottom: 31px;
   }
 }
 
@@ -30,6 +34,16 @@
   text-transform: uppercase;
   color: @main-text-color;
   margin: 0;
+
+  br {
+    display: none;
+  }
+
+  @media @tablet {
+    br {
+      display: inline-block;
+    }
+  }
 }
 
 .offer__button {
