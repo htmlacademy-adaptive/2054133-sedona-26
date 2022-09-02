@@ -119,9 +119,22 @@
 }
 
 .advantages__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @media @mobile-only {
+    &--small:not(:last-child)::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 5%;
+      width: 90%;
+      height: 1px;
+      background-color: #d6d6d6;
+    }
+  }
 
   @media @tablet {
     flex-direction: row;
