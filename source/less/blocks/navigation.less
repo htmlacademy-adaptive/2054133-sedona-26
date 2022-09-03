@@ -95,8 +95,19 @@
   }
 
   @media @tablet {
-    display: flex;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(5, 1fr);
     background-color: inherit;
+
+    &::before {
+      display: block;
+      content: "";
+      grid-column: 3/4;
+      grid-row: span 2;
+      width: 100%;
+      top: 0;
+    }
   }
 }
 
@@ -125,14 +136,6 @@
       width: 100%;
       height: 7px;
       background: linear-gradient(0deg, fade(@dark-color, 20%), fade(@dark-color, 0%) 100%);
-    }
-  }
-
-  @media @tablet {
-    flex-basis: 25%;
-
-    &--margin-right {
-      margin-right: 20%;
     }
   }
 }
