@@ -45,7 +45,7 @@
     &--narrow:nth-child(odd)::before {
       position: absolute;
       content: "";
-      background-color: #dbdbdb;
+      background-color: @dekore-form-line;
       width: 1px;
       height: 100%;
       top: 0;
@@ -126,7 +126,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-color: #e5e5e5;
+    background-color: @dekore-line;
     height: 1px;
     width: 115%;
     top: -24px;
@@ -184,7 +184,7 @@
     &--wide::before {
       position: absolute;
       content: "";
-      background-color: #e5e5e5;
+      background-color: @dekore-line;
       height: 1px;
       width: 100%;
       top: 50%;
@@ -249,7 +249,7 @@
     background-repeat: no-repeat;
     background-size: 18px 18px;
     background-position: center;
-    background-color: #e6e6e6;
+    background-color: @bg-input-icon;
     width: 58px;
     height: 58px;
     top: 21px;
@@ -263,7 +263,7 @@
     background-repeat: no-repeat;
     background-size: 18px 18px;
     background-position: center;
-    background-color: #e6e6e6;
+    background-color: @bg-input-icon;
     width: 58px;
     height: 58px;
     top: 21px;
@@ -280,11 +280,11 @@
   cursor: pointer;
 
   &:hover::before {
-    background-color: #e5e5e5;
+    background-color: @dekore-line;
   }
 
   &:active::before {
-    background-color: #d5d5d5;
+    background-color: @dekore-line;
   }
 
   &:active::after {
@@ -333,7 +333,7 @@
 }
 
 .form__input-radio[type="radio"]:focus + .form__label-bold--radio::before {
-  background-color: #e5e5e5;
+  background-color: @input-hover-color;
 }
 
 .form__label-bold--checkbox {
@@ -376,7 +376,7 @@
 }
 
 .form__input-checkbox[type="checkbox"]:focus + .form__label-bold--checkbox::before {
-  background-color: #e5e5e5;
+  background-color: @input-hover-color;
 }
 
 .form__textarea {
@@ -402,7 +402,7 @@
   }
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: @input-hover-color;
   }
 
   &:focus {
