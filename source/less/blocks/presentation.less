@@ -1,7 +1,20 @@
 .presentation {
+  position: relative;
   display: flex;
   flex-direction: column;
   max-width: 87.5%;
+
+  @media @mobile-only {
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #d6d6d6;
+      height: 1px;
+      top: 0;
+      left: -8%;
+      width: 115%;
+    }
+  }
 
   @media @tablet {
     max-width: 84.5%;
