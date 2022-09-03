@@ -10,12 +10,16 @@
   background-color: @primary-color;
   cursor: pointer;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: @btn-hover-color;
   }
 
-  &:active {
+  &:active:not(:disabled) {
     background-color: @btn-active-color;
     color: fade(@light-color, 30%);
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
