@@ -69,12 +69,6 @@
   color: @main-text-color;
   margin-top: 0;
   margin-bottom: 0;
-
-  @media @mobile-only {
-    br {
-      display: inline-block;
-    }
-  }
 }
 
 .advantages__description--light-color {
@@ -158,8 +152,8 @@
   }
 
   @media @desktop {
-    padding-right: 67px;
-    padding-left: 67px;
+    padding-right: 45px;
+    padding-left: 45px;
 
     &--high {
       padding-top: 49px;
@@ -217,3 +211,26 @@
     margin-bottom: 0;
   }
 }
+
+.advantages__transfer {
+  display: none;
+
+  @media @mobile-only {
+    &--mobile {
+      display: inline-block;
+    }
+  }
+
+  @media @tablet-only {
+    &--tablet {
+      display: inline-block;
+    }
+  }
+
+  @media @desktop {
+    &--desktop {
+      display: inline-block;
+    }
+  }
+}
+

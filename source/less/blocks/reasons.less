@@ -35,12 +35,6 @@
     }
   }
 
-  @media @mobile-only {
-    &--food {
-      padding-left: 53px;
-    }
-  }
-
   &--food::before {
     position: absolute;
     content: "";
@@ -97,6 +91,7 @@
 
   @media @desktop {
     padding: 160px 55px 80px;
+    min-width: 400px;
   }
 }
 
@@ -115,14 +110,20 @@
   .font-size-xs();
   text-transform: uppercase;
   margin: 0;
+}
 
-  // br {
-  //   display: none;
-  // }
+.reasons__transfer {
+  display: none;
 
-  // @media @tablet {
-  //   br {
-  //     display: inline-block;
-  //   }
-  // }
+  @media @tablet-only {
+    &--tablet {
+      display: inline-block;
+    }
+  }
+
+  @media @desktop {
+    &--desktop {
+      display: inline-block;
+    }
+  }
 }
