@@ -56,8 +56,8 @@
         </div>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form__fieldset form__fieldset--narrow">
-            <div class="form__legend-container form__legend-container--narrow">
-              <legend class="form__legend form__legend--indent-left">Представьтесь:</legend>
+            <div class="form__header-container form__header-container--narrow">
+              <h2 class="form__header form__header--indent-left">Представьтесь:</h2>
             </div>
             <label class="form__label-thin">
               <span class="form__label-description">Имя*:</span>
@@ -76,8 +76,8 @@
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--narrow">
-            <div class="form__legend-container form__legend-container--narrow">
-              <legend class="form__legend form__legend--indent-right">Контактная информация:</legend>
+            <div class="form__header-container form__header-container--narrow">
+              <h2 class="form__header form__header--indent-right">Контактная информация:</h2>
             </div>
             <label class="form__label-thin form__label-thin--phone">
               <span class="form__label-description">Контактный телефон*:</span>
@@ -89,8 +89,8 @@
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--wide ">
-            <div class="form__legend-container form__legend-container--wide">
-              <legend class="form__legend form__legend--wide">Ваше общее впечатление:</legend>
+            <div class="form__header-container form__header-container--wide">
+              <h2 class="form__header form__header--wide">Ваше общее впечатление:</h2>
             </div>
             <div class="form__fieldset--radio">
               <input class="form__input-radio visually-hidden" type="radio" id="positive" name="impression"
@@ -108,8 +108,8 @@
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--wide">
-            <div class="form__legend-container form__legend-container--indent form__legend-container--wide">
-              <legend class="form__legend form__legend--wide">Посещенные<br>достопримечательности:</legend>
+            <div class="form__header-container form__header-container--indent form__header-container--wide">
+              <h2 class="form__header form__header--wide">Посещенные<br>достопримечательности:</h2>
             </div>
             <div class="form__fieldset--checkbox">
               <input class="form__input-checkbox visually-hidden" type="checkbox" id="bridge" name="attraction"
@@ -131,8 +131,8 @@
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--wide">
-            <div class="form__legend-container form__legend-container--wide form__legend-container--second-indent">
-              <legend class="form__legend form__legend--wide">Опишите свои эмоции:</legend>
+            <div class="form__header-container form__header-container--wide form__header-container--second-indent">
+              <h2 class="form__header form__header--wide">Опишите свои эмоции:</h2>
             </div>
             <textarea class="form__textarea" name="emotion" cols="15" rows="5"
               placeholder="Опишите подробно все свои восторги"></textarea>
@@ -181,7 +181,7 @@
     <div class="modal-error modal-error--close">
       <div class="modal-error__container">
         <div class="modal-error__text-container">
-          <h2 class="modal-error__header">Что-то пошло не так!</h2>
+          <div class="modal-error__header">Что-то пошло не так!</div>
           <p class="modal-error__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         </div>
         <button class="modal-error__button button" type="button">Ок</button>
@@ -191,7 +191,7 @@
     <div class="modal-confirmation modal-error--close">
       <div class="modal-confirmation__container">
         <div class="modal-confirmation__text-container">
-          <h2 class="modal-confirmation__header">Ваш отзыв отправлен!</h2>
+          <div class="modal-confirmation__header">Ваш отзыв отправлен!</div>
           <p class="modal-confirmation__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее
             время мы опубликуем его на сайте.</p>
         </div>
