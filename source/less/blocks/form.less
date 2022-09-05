@@ -114,7 +114,7 @@
   min-height: 46px;
 }
 
-.form__legend {
+.form__header {
   .header-reset();
   .font-size-s();
   text-align: center;
@@ -128,9 +128,10 @@
     content: "";
     background-color: @dekore-line;
     height: 1px;
-    width: 115%;
+    width: 100vw;
     top: -24px;
-    left: -8%;
+    left: -7%;
+    overflow: hidden;
   }
 
   @media @tablet {
@@ -165,7 +166,7 @@
   }
 }
 
-.form__legend-container {
+.form__header-container {
   position: relative;
   margin-bottom: 4px;
   grid-column: 1/-1;
