@@ -19,7 +19,13 @@
   margin-right: auto;
 
   @media @tablet {
+    padding-top: 64px;
     padding-bottom: 102px;
+  }
+
+  @media @desktop {
+    padding-top: 113px;
+    padding-bottom: 67px;
   }
 }
 
@@ -32,6 +38,10 @@
     .font-size-l();
     margin-bottom: 20px;
   }
+
+  @media @desktop {
+    margin-bottom: 29px;
+  }
 }
 
 .feedback__description {
@@ -40,4 +50,16 @@
   text-transform: uppercase;
   color: @main-text-color;
   margin: 0;
+
+  @media @tablet {
+    line-height: 24px;
+  }
+}
+
+.feedback__form {
+  margin-bottom: 24px;
+
+  @media @tablet {
+    margin-bottom: 64px;
+  }
 }

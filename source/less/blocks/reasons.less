@@ -1,5 +1,4 @@
 .reasons {
-  .list-reset();
   max-width: 90%;
 
   @media @tablet {
@@ -11,7 +10,8 @@
 
 .reasons__item {
   position: relative;
-  padding: 22px 18px 22px 47px;
+  padding-top: 31px;
+  padding-left: 47px;
 
   &--house::before {
     position: absolute;
@@ -19,14 +19,18 @@
     background-image: url("../img/house.svg");
     background-size: 40px;
     background-repeat: no-repeat;
-    top: 13px;
+    width: 40px;
+    height: 40px;
+    top: 24px;
     right: 0;
     bottom: 0;
     left: 0;
 
     @media @tablet {
       background-size: 80px;
-      top: 60px;
+      width: 80px;
+      height: 80px;
+      top: 56px;
       left: calc(50% - 40px);
     }
   }
@@ -37,14 +41,18 @@
     background-image: url("../img/burger.svg");
     background-size: 40px;
     background-repeat: no-repeat;
-    top: 13px;
+    width: 40px;
+    height: 40px;
+    top: 22px;
     right: 0;
     bottom: 0;
     left: 0;
 
     @media @tablet {
       background-size: 80px;
-      top: 60px;
+      width: 80px;
+      height: 80px;
+      top: 56px;
       left: calc(50% - 40px);
     }
   }
@@ -55,14 +63,18 @@
     background-image: url("../img/present.svg");
     background-size: 40px;
     background-repeat: no-repeat;
-    top: 13px;
+    width: 40px;
+    height: 40px;
+    top: 21px;
     right: 0;
     bottom: 0;
     left: 0;
 
     @media @tablet {
       background-size: 80px;
-      top: 60px;
+      width: 80px;
+      height: 80px;
+      top: 54px;
       left: calc(50% - 40px);
     }
   }
@@ -72,8 +84,7 @@
     flex-direction: column;
     flex-basis: 33.33%;
     text-align: center;
-    max-width: 400px;
-    padding: 160px 30px 60px;
+    padding: 160px 31px 59px;
     box-sizing: border-box;
   }
 
@@ -89,6 +100,7 @@
 
   @media @tablet {
     .font-size-m();
+    margin-bottom: 22px;
   }
 }
 
@@ -96,4 +108,20 @@
   .font-size-xs();
   text-transform: uppercase;
   margin: 0;
+}
+
+.reasons__transfer {
+  display: none;
+
+  @media @tablet-only {
+    &--tablet {
+      display: inline-block;
+    }
+  }
+
+  @media @desktop {
+    &--desktop {
+      display: inline-block;
+    }
+  }
 }

@@ -29,7 +29,7 @@
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
           </li>
-          <li class="navigation__item navigation__item--margin-right">
+          <li class="navigation__item">
             <a class="navigation__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="navigation__item">
@@ -55,36 +55,41 @@
         </div>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form__fieldset form__fieldset--narrow">
-            <div>
-              <legend class="form__legend">Представьесь:</legend>
+            <div class="form__header-container form__header-container--narrow">
+              <h2 class="form__header form__header--indent-left">Представьтесь:</h2>
             </div>
-            <label class="form__label-thin" for="name">Имя*:
-              <input class="form__input-area" type="text" id="name" name="name" value="Петр"
+            <label class="form__label-thin">
+              <span class="form__label-description">Имя*:</span>
+              <input class="form__input-area" type="text" name="name" value="Пётр"
                 placeholder="Введите ваше имя">
             </label>
-            <label class="form__label-thin" for="surname">Фамилия*:
-              <input class="form__input-area" type="text" id="surname" name="surname" value="Пустота"
+            <label class="form__label-thin">
+              <span class="form__label-description">Фамилия*:</span>
+              <input class="form__input-area" type="text" name="surname" value="Пустота"
                 placeholder="Введите вашу фамилию">
             </label>
-            <label class="form__label-thin" for="patronymic">Отчество:
-              <input class="form__input-area" type="text" id="patronymic" name="patronymic" value="Викторович"
+            <label class="form__label-thin">
+              <span class="form__label-description">Отчество:</span>
+              <input class="form__input-area" type="text" name="patronymic" value="Викторович"
                 placeholder="Введите ваше отчество">
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--narrow">
-            <div>
-              <legend class="form__legend">Контактная информация:</legend>
+            <div class="form__header-container form__header-container--narrow">
+              <h2 class="form__header form__header--indent-right">Контактная информация:</h2>
             </div>
-            <label class="form__label-thin form__label-thin--phone" for="phone">Контактный телефон*:
-              <input class="form__input-area" type="tel" id="phone" name="phone" placeholder="Введите телефон">
+            <label class="form__label-thin form__label-thin--phone">
+              <span class="form__label-description">Контактный телефон*:</span>
+              <input class="form__input-area" type="tel" name="phone" placeholder="Введите телефон">
             </label>
-            <label class="form__label-thin form__label-thin--mail" for="mail">Электронная почта*:
-              <input class="form__input-area" type="email" id="mail" name="mail" placeholder="Введите e-mail">
+            <label class="form__label-thin form__label-thin--mail">
+              <span class="form__label-description">Электронная почта*:</span>
+              <input class="form__input-area" type="email" name="mail" placeholder="Введите e-mail">
             </label>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--wide">
-            <div class="form__legend-container">
-              <legend class="form__legend form__legend--wide">Ваше общее впечатление:</legend>
+          <fieldset class="form__fieldset form__fieldset--wide ">
+            <div class="form__header-container form__header-container--wide">
+              <h2 class="form__header form__header--wide">Ваше общее впечатление:</h2>
             </div>
             <div class="form__fieldset--radio">
               <input class="form__input-radio visually-hidden" type="radio" id="positive" name="impression"
@@ -102,8 +107,8 @@
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--wide">
-            <div class="form__legend-container">
-              <legend class="form__legend form__legend--wide">Посещенные<br>достопримечательности:</legend>
+            <div class="form__header-container form__header-container--indent form__header-container--wide">
+              <h2 class="form__header form__header--wide">Посещенные<br>достопримечательности:</h2>
             </div>
             <div class="form__fieldset--checkbox">
               <input class="form__input-checkbox visually-hidden" type="checkbox" id="bridge" name="attraction"
@@ -125,10 +130,10 @@
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--wide">
-            <div class="form__legend-container">
-              <legend class="form__legend form__legend--wide">Опишите свои эмоции:</legend>
+            <div class="form__header-container form__header-container--wide form__header-container--second-indent">
+              <h2 class="form__header form__header--wide">Опишите свои эмоции:</h2>
             </div>
-            <textarea class="form__textarea" name="emotion" cols="15" rows="7"
+            <textarea class="form__textarea" name="emotion" cols="15" rows="5"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <div class="form__button-container">
@@ -144,35 +149,28 @@
         <p class="footer__tagline">#visitsedona</p>
         <div class="footer__social-container">
           <a class="footer__social-link" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">vkontakte</span>
-            <svg class="footer__social-icon" width="24" height="14" viewBox="0 0 24 14"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M23.45.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74V.95c0-.66-.18-.95-.74-.95H9.15c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H.9C.15 0 0 .35 0 .73c0 .68.89 4.07 4.14 8.55C6.32 12.34 9.38 14 12.15 14c1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.69-.88.38 0 1.05.2 2.61 1.67C19.11 13.22 19.4 14 20.41 14h2.62c.75 0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.54-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z" />
+            <span class="visually-hidden">Сайт vkontakte</span>
+            <svg class="footer__social-icon" width="24" height="24">
+              <use href="img/sprite.svg#vk"></use>
             </svg>
           </a>
           <a class="footer__social-link" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">telegram</span>
-            <svg class="footer__social-icon" width="24" height="24" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="m22.44 4.62-3.17 14.95c-.24 1.05-.86 1.31-1.75.82l-4.83-3.56-2.33 2.24c-.25.26-.47.47-.97.47l.35-4.91 8.95-8.09c.39-.35-.09-.54-.6-.2L7.01 13.32l-4.76-1.49c-1.04-.32-1.05-1.03.22-1.53L21.1 3.11c.87-.32 1.62.2 1.34 1.51Z" />
+            <span class="visually-hidden">Сайт telegram</span>
+            <svg class="footer__social-icon" width="24" height="24">
+              <use href="img/sprite.svg#tg"></use>
             </svg>
           </a>
           <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">youtube</span>
-            <svg class="footer__social-icon" width="24" height="24" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M19.18 5H4.81C3.31 5 2 6.3 2 7.8v8.3C2 17.7 3.3 19 4.81 19h14.37A2.8 2.8 0 0 0 22 16.2V7.8c.1-1.5-1.2-2.8-2.8-2.8ZM9.03 15.4V8.6l6.84 3.4-6.84 3.4Z" />
+            <span class="visually-hidden">Сайт youtube</span>
+            <svg class="footer__social-icon" width="24" height="24">
+              <use href="img/sprite.svg#yt"></use>
             </svg>
           </a>
         </div>
-        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
           <span class="footer__copyright-link-description">Разработано</span>
-          <svg width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z" />
+          <svg width="27" height="35" viewBox="0 0 27 35">
+            <use href="img/sprite.svg#copyright"></use>
           </svg>
         </a>
       </div>
@@ -182,7 +180,7 @@
     <div class="modal-error modal-error--close">
       <div class="modal-error__container">
         <div class="modal-error__text-container">
-          <h2 class="modal-error__header">Что-то пошло не так!</h2>
+          <div class="modal-error__header">Что-то пошло не так!</div>
           <p class="modal-error__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         </div>
         <button class="modal-error__button button" type="button">Ок</button>
@@ -192,7 +190,7 @@
     <div class="modal-confirmation modal-error--close">
       <div class="modal-confirmation__container">
         <div class="modal-confirmation__text-container">
-          <h2 class="modal-confirmation__header">Ваш отзыв отправлен!</h2>
+          <div class="modal-confirmation__header">Ваш отзыв отправлен!</div>
           <p class="modal-confirmation__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее
             время мы опубликуем его на сайте.</p>
         </div>

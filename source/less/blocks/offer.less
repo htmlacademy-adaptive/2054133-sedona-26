@@ -1,27 +1,40 @@
 .offer {
-  padding: 40px 20px 50px 20px;
+  padding: 40px 18px 49px;
   text-align: center;
 
   @media @tablet {
-    padding: 60px 20px 75px 20px;
+    padding: 60px 20px 58px;
+  }
+
+  @media @desktop {
+    padding-top: 59px;
+    padding-bottom: 66px;
   }
 }
 
 .offer__container {
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 33px;
+  padding-bottom: 33px;
   max-width: 435px;
+
+  @media @tablet {
+    padding-bottom: 43px;
+  }
+
+  @media @desktop {
+    padding-bottom: 49px;
+  }
 }
 
 .offer__header {
   .header-reset();
   .font-size-m();
-  margin-bottom: 31px;
+  margin-bottom: 20px;
 
   @media @tablet {
     .font-size-l();
-    margin-bottom: 38px;
+    margin-bottom: 31px;
   }
 }
 
@@ -30,13 +43,31 @@
   text-transform: uppercase;
   color: @main-text-color;
   margin: 0;
+
+  br {
+    display: none;
+  }
+
+  @media @tablet {
+    br {
+      display: inline-block;
+    }
+  }
 }
 
 .offer__button {
   display: block;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px;
   max-width: 458px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
+}
+
+.offer__transfer {
+  display: none;
+
+  @media @tablet {
+    display: inline-block;
+  }
 }

@@ -9,8 +9,22 @@
 }
 
 .photo-list__item {
+  position: relative;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
+
+  @media @mobile-only {
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: @dekore-line;
+      height: 1px;
+      top: 0;
+      left: -7%;
+      width: 100vw;
+      overflow: hidden;
+    }
+  }
 
   @media @tablet {
     flex-basis: 50%;
@@ -31,6 +45,7 @@
 .photo-list__image {
   display: block;
   width: 100%;
+  height: auto;
   background-color: @substrate-color;
 }
 
@@ -40,7 +55,7 @@
   @media @tablet {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    padding: 20px 20px 15px;
+    padding: 22px 20px 16px;
 
     &--first-bg-color {
       background-color: @bg-first-color;
@@ -74,7 +89,7 @@
   .font-size-xs;
   color: @main-text-color;
   margin: 0;
-  padding-bottom: 11px;
+  padding-bottom: 7px;
   grid-column: 1/2;
 
   @media @tablet {

@@ -16,7 +16,7 @@
 .navigation__toggle {
   position: absolute;
   top: 8px;
-  right: 8px;
+  right: 12px;
   width: 40px;
   height: 40px;
   border: none;
@@ -95,8 +95,19 @@
   }
 
   @media @tablet {
-    display: flex;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(5, 1fr);
     background-color: inherit;
+
+    &::before {
+      display: block;
+      content: "";
+      grid-column: 3/4;
+      grid-row: span 2;
+      width: 100%;
+      top: 0;
+    }
   }
 }
 
@@ -112,17 +123,19 @@
     }
 
     &:last-child {
+      position: relative;
       margin-bottom: 0;
       box-shadow: inset 0 1px 0 0 fade(@light-color, 20%);
-      background: linear-gradient(0deg, fade(@dark-color, 20%), fade(@dark-color, 0%) 15%);
     }
-  }
 
-  @media @tablet {
-    flex-basis: 25%;
-
-    &--margin-right {
-      margin-right: 20%;
+    &:last-child::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 7px;
+      background: linear-gradient(0deg, fade(@dark-color, 20%), fade(@dark-color, 0%) 100%);
     }
   }
 }
@@ -149,7 +162,7 @@
   @media @tablet {
     .font-size-xs();
     color: @dark-color;
-    padding: 18px 10px;
+    padding: 18px 10px 17px;
 
     &:hover {
       color: @primary-color;
