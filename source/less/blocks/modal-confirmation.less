@@ -3,6 +3,7 @@
   z-index: 4;
   background-color: fade(@dark-color, 30%);
   width: 100%;
+  max-width: 1200px;
   height: 100%;
   text-align: center;
   align-self: center;
@@ -28,21 +29,21 @@
 }
 
 .modal-confirmation__text-container {
-  padding: 45px 40px 35px;
+  padding: 39px 40px 51px;
 
   @media @tablet {
-    padding: 57px 100px 35px;
+    padding: 51px 100px;
   }
 }
 
 .modal-confirmation__header {
   .header-reset();
   .font-size-s();
-  margin-bottom: 37px;
+  margin-bottom: 25px;
 
   @media @tablet {
     .font-size-l();
-    margin-bottom: 37px;
+    margin-bottom: 30px;
   }
 }
 
@@ -63,10 +64,15 @@
 }
 
 .modal-confirmation__button {
+  .font-size-s();
   display: block;
   width: 100%;
-  max-width: 460px;
+  max-width: 458px;
   padding-top: 18px;
   padding-bottom: 14px;
   margin: 0 auto;
+
+  @media @tablet {
+    .font-size-m();
+  }
 }
