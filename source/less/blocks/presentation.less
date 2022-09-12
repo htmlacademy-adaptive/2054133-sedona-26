@@ -66,6 +66,7 @@
 }
 
 .presentation__play-button {
+  z-index: 1;
   position: absolute;
   content: "";
   top: 0;
@@ -82,6 +83,14 @@
 
   @media @tablet {
     left: 0;
+  }
+
+  &:hover {
+    opacity: 75%;
+  }
+
+  &:active {
+    opacity: 50%;
   }
 }
 

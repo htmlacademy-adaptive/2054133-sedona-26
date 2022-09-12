@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/icon-x180.png">
@@ -45,7 +45,7 @@
     <main class="page__main main">
       <header class="main__header hero hero--large-content">
         <img class="hero__image hero__image--large" src="img/welcome.svg" width="282" height="214"
-          alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks" />
+          alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks"/>
       </header>
 
       <section class="advantages">
@@ -62,6 +62,9 @@
             </div>
             <div class="advantages__item-image-container">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/city-desktop.webp 1x, img/city-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/city-tablet.webp 1x, img/city-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/city-mobile.webp 1x, img/city-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/city-desktop.jpg 1x, img/city-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/city-tablet.jpg 1x, img/city-tablet@2x.jpg 2x">
                 <img class="advantages__image" src="img/city-mobile.jpg" width="320" height="260"
@@ -91,6 +94,9 @@
             </div>
             <div class="advantages__item-image-container advantages__item-image-container--order">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/bridge-desktop.webp 1x, img/bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/bridge-tablet.webp 1x, img/bridge-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/bridge-mobile.webp 1x, img/bridge-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/bridge-desktop.jpg 1x, img/bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/bridge-tablet.jpg 1x, img/bridge-tablet@2x.jpg 2x">
                 <img class="advantages__image" src="img/bridge-mobile.jpg" srcset ="img/bridge-mobile@2x.jpg 2x" width="320" height="260"
@@ -107,13 +113,13 @@
           <li class="advantages__item advantages__item--small">
             <div class="advantages__item-container advantages__item-container--secondary-color advantages__item-container--small">
               <h2 class="advantages__header advantages__header--secondary">Красивая <br class=" advantages__transfer advantages__transfer--mobile advantages__transfer--tablet advantages__transfer--desktop">дорога</h2>
-              <p class="advantages__description">Ехать в седону из <br class="advantages__transfer advantages__transfer--tablet">Лас-Вегаса <br class="advantages__transfer advantages__transfer--mobile">совсем <br class="advantages__transfer advantages__transfer--tablet">не скучно!</p>
+              <p class="advantages__description">Ехать в седону из <br class="advantages__transfer advantages__transfer--tablet">Лас-Вегаса <br class="advantages__transfer advantages__transfer--mobile">совсем <br class="advantages__transfer advantages__transfer--tablet advantages__transfer--desktop">не скучно!</p>
             </div>
           </li>
           <li class="advantages__item advantages__item--small">
             <div class="advantages__item-container advantages__item-container--secondary-color advantages__item-container--small">
               <h2 class="advantages__header advantages__header--secondary">Мало <br class="advantages__transfer advantages__transfer--tablet advantages__transfer--desktop">туристов</h2>
-              <p class="advantages__description">Большинство едет в <br class=" advantages__transfer advantages__transfer--tablet">Гранд Каньон <br class="advantages__transfer advantages__transfer--mobile">и толпятся там</p>
+              <p class="advantages__description">Большинство едет в <br class=" advantages__transfer advantages__transfer--tablet">Гранд Каньон <br class="advantages__transfer advantages__transfer--mobile">и <br class="advantages__transfer advantages__transfer--tablet">толпятся там</p>
             </div>
           </li>
         </ol>
@@ -166,7 +172,7 @@
     </footer>
 
   </div>
-  <script src="./js/main.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
