@@ -10,6 +10,8 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
+import jsmin from 'gulp-jsmin';
 
 // Styles
 
@@ -21,7 +23,7 @@ export const styles = () => {
   autoprefixer(),
   csso()
   ]))
-  .pipe(rename('style.min.css'))
+  .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
   .pipe(browser.stream());
 }
@@ -30,13 +32,15 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
-  .pipe(gulp.dest('build'));
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
-const scripts = () => {
-  return gulp.src('source/js/script.js')
+const scripts  = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(jsmin())
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
 }
@@ -47,9 +51,9 @@ const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
-  }
+}
 
-  const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(gulp.dest('build/img'))
   }
@@ -137,7 +141,6 @@ const watcher = () => {
 export const build = gulp.series(
 clean,
 copy,
-copyImages,
 optimizeImages,
 gulp.parallel(
 styles,
