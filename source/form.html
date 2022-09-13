@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/icon-x180.png">
@@ -25,7 +26,7 @@
         <button class="navigation__toggle navigation__toggle--opened navigation__toggle--nojs" type="button">
           <span class="visually-hidden">Раскрыть меню</span>
         </button>
-        <ul class="navigation__list">
+        <ul class="navigation__list navigation__list--opened">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
           </li>
@@ -180,7 +181,7 @@
     <div class="modal-error modal-error--close">
       <div class="modal-error__container">
         <div class="modal-error__text-container">
-          <div class="modal-error__header">Что-то пошло не так!</div>
+          <h2 class="modal-error__header">Что-то пошло не&nbsp;так!</h2>
           <p class="modal-error__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         </div>
         <button class="modal-error__button button" type="button">Ок</button>
@@ -190,7 +191,7 @@
     <div class="modal-confirmation modal-error--close">
       <div class="modal-confirmation__container">
         <div class="modal-confirmation__text-container">
-          <div class="modal-confirmation__header">Ваш отзыв отправлен!</div>
+          <h2 class="modal-confirmation__header">Ваш отзыв отправлен!</h2>
           <p class="modal-confirmation__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее
             время мы опубликуем его на сайте.</p>
         </div>
@@ -201,7 +202,7 @@
     </div>
 
   </div>
-  <script src="./js/main.js"></script>
+  <script src="./js/main.min.js"></script>
 </body>
 
 </html>

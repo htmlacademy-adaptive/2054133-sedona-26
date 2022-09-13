@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/icon-x180.png">
@@ -25,7 +26,7 @@
         <button class="navigation__toggle navigation__toggle--opened navigation__toggle--nojs" type="button">
           <span class="visually-hidden">Раскрыть меню</span>
         </button>
-        <ul class="navigation__list">
+        <ul class="navigation__list navigation__list--opened">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
           </li>
@@ -55,6 +56,9 @@
         <ul class="gallery__list photo-list">
           <li class="photo-list__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo1-desktop.webp 1x, img/photo1-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo1-tablet.webp 1x, img/photo1-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo1-mobile.webp 1x, img/photo1-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo1-desktop.jpg 1x, img/photo1-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo1-tablet.jpg 1x, img/photo1-tablet@2x.jpg 2x">
               <img class="photo-list__image" src="img/photo1-mobile.jpg" srcset="img/photo1-mobile@2x.jpg 2x" width="280" height="280"
@@ -63,7 +67,7 @@
             <div class="photo-list__item-container photo-list__item-container--first-bg-color">
               <h2 class="photo-list__title">Неродные просторы</h2>
               <p class="photo-list__author">Автор фото: Борис</p>
-              <a class="photo-list__like-link" href="#" aria-label="Поставить лайк">
+              <a class="photo-list__like-link" aria-label="Поставить лайк">
                 <svg class="photo-list__like-icon" width="23" height="21">
                   <use href="img/sprite.svg#like"></use>
                 </svg>
@@ -73,6 +77,9 @@
           </li>
           <li class="photo-list__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo2-desktop.webp 1x, img/photo2-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo2-tablet.webp 1x, img/photo2-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo2-mobile.webp 1x, img/photo2-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo2-desktop.jpg 1x, img/photo2-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo2-tablet.jpg 1x, img/photo2-tablet@2x.jpg 2x">
               <img class="photo-list__image" src="img/photo2-mobile.jpg" srcset="img/photo2-mobile@2x.jpg 2x" width="280" height="280"
@@ -81,7 +88,7 @@
             <div class="photo-list__item-container photo-list__item-container--first-bg-color">
               <h2 class="photo-list__title">Местная растительность</h2>
               <p class="photo-list__author">Автор фото: Сергей</p>
-              <a class="photo-list__like-link" href="#" aria-label="Поставить лайк">
+              <a class="photo-list__like-link" aria-label="Поставить лайк">
                 <svg class="photo-list__like-icon" width="23" height="21">
                   <use href="img/sprite.svg#like"></use>
                 </svg>
@@ -91,6 +98,9 @@
           </li>
           <li class="photo-list__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo3-desktop.webp 1x, img/photo3-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo3-tablet.webp 1x, img/photo3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo3-mobile.webp 1x, img/photo3-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo3-desktop.jpg 1x, img/photo3-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo3-tablet.jpg 1x, img/photo3-tablet@2x.jpg 2x">
               <img class="photo-list__image" src="img/photo3-mobile.jpg" srcset="img/photo3-mobile@2x.jpg 2x" width="280" height="280"
@@ -99,7 +109,7 @@
             <div class="photo-list__item-container photo-list__item-container--second-bg-color">
               <h2 class="photo-list__title">Дорога на север</h2>
               <p class="photo-list__author">Автор фото: Петр</p>
-              <a class="photo-list__like-link" href="#" aria-label="Поставить лайк">
+              <a class="photo-list__like-link" aria-label="Поставить лайк">
                 <svg class="photo-list__like-icon" width="23" height="21">
                   <use href="img/sprite.svg#like"></use>
                 </svg>
@@ -109,6 +119,9 @@
           </li>
           <li class="photo-list__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo4-desktop.webp 1x, img/photo4-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo4-tablet.webp 1x, img/photo4-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo4-mobile.webp 1x, img/photo4-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo4-desktop.jpg 1x, img/photo4-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo4-tablet.jpg 1x, img/photo4-tablet@2x.jpg 2x">
               <img class="photo-list__image" src="img/photo4-mobile.jpg" srcset="img/photo4-mobile@2x.jpg 2x" width="280" height="280"
@@ -117,7 +130,7 @@
             <div class="photo-list__item-container photo-list__item-container--second-bg-color">
               <h2 class="photo-list__title">Мост дьявола</h2>
               <p class="photo-list__author">Автор фото: Антон</p>
-              <a class="photo-list__like-link" href="#" aria-label="Поставить лайк">
+              <a class="photo-list__like-link" aria-label="Поставить лайк">
                 <svg class="photo-list__like-icon" width="23" height="21">
                   <use href="img/sprite.svg#like"></use>
                 </svg>
@@ -175,7 +188,7 @@
     </footer>
 
   </div>
-  <script src="./js/main.js"></script>
+  <script src="./js/main.min.js"></script>
 </body>
 
 </html>
