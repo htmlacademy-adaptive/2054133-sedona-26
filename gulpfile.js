@@ -41,6 +41,7 @@ const html = () => {
 const scripts  = () => {
   return gulp.src('source/js/*.js')
   .pipe(jsmin())
+  .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
 }
@@ -132,30 +133,30 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/js/main.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
 
 export const build = gulp.series(
-clean,
-copy,
-optimizeImages,
-gulp.parallel(
-styles,
-html,
-scripts,
-svg,
-sprite,
-createWebp
-),
-);
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+  styles,
+  html,
+  scripts,
+  svg,
+  sprite,
+  createWebp
+  ),
+  );
 
 // Default
 
 export default gulp.series(
-gulp.series(
-server,
-watcher
-));
+  gulp.series(
+  server,
+  watcher
+  ));
