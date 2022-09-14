@@ -6,6 +6,36 @@
   }
 }
 
+.interactive-map__wrapper {
+  background-image: url("../img/map-mobile.jpg");
+  background-size: 320px 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 350px;
+
+  @media @retina {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+
+  @media @tablet {
+    background-image: url("../img/map-tablet.jpg");
+    background-size: 768px 350px;
+
+    @media @retina {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
+  }
+
+  @media @desktop {
+    background-image: url("../img/map-desktop.jpg");
+    background-size: 1200px 350px;
+
+    @media @desktop {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
+  }
+}
+
 .interactive-map__map {
   display: block;
   border: 0;
