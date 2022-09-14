@@ -23,16 +23,6 @@
   margin: 0;
   padding: 0;
 
-  &--radio {
-    display: grid;
-    gap: 16px;
-  }
-
-  &--checkbox {
-    display: grid;
-    gap: 16px;
-  }
-
   &--narrow:first-child {
     padding-bottom: 16px;
   }
@@ -61,7 +51,31 @@
       grid-column: 1/-1;
       align-items: center;
     }
+  }
 
+  @media @desktop {
+    &--narrow {
+      margin-bottom: 0;
+    }
+
+    &--narrow:nth-child(odd)::before {
+      right: -64px;
+    }
+  }
+}
+
+.form__fieldset-container {
+  &--radio {
+    display: grid;
+    gap: 16px;
+  }
+
+  &--checkbox {
+    display: grid;
+    gap: 16px;
+  }
+
+  @media @tablet {
     &--radio {
       display: grid;
       grid-template-columns: 280px 280px;
@@ -79,14 +93,6 @@
   }
 
   @media @desktop {
-    &--narrow {
-      margin-bottom: 0;
-    }
-
-    &--narrow:nth-child(odd)::before {
-      right: -64px;
-    }
-
     &--radio {
       display: grid;
       grid-template-columns: repeat(3, auto);
